@@ -33,9 +33,11 @@ TBC
 
 **Kate Crawford (Data Science Engineer)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/NAME) -->
+[GitHub](https://github.com/codewithkate)
 
 **Mark Harris (Data Science Engineer)**
+<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+[GitHub](https://github.com/MarkCHarris)
 
 **Martin Fitzpatrick (Software Engineer)**
 
