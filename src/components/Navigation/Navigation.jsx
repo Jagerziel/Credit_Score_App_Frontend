@@ -4,6 +4,9 @@ import './Navigation.scss'
 
 export function Navigation () {
   return (
-    <div>Navigation</div>
+    <>
+      <div className='navigation'>Navigation</div>
+      <div className='navigation-background'></div>
+    </>
   )
 }
