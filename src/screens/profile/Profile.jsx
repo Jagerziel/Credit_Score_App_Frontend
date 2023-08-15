@@ -2,7 +2,7 @@ import React from 'react'
 import './Profile.scss'
 
 
-export function Profile () {
+export default function Profile () {
   return (
     <div>Profile</div>
   )
