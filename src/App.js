@@ -1,7 +1,7 @@
 // Import React
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 // Import Components
-import Home from "./screens/home/Home.jsx"
+import Home from './screens/home/Home.jsx';
 // Import CSS
 import './App.scss';
 
