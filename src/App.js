@@ -5,6 +5,7 @@ import Home from "./screens/home/Home.jsx"
 import Profile from "./screens/profile/Profile.jsx";
 import Dashboard from "./screens/dashboard/Dashboard.jsx";
 import { Navigation } from "./components/Navigation/Navigation.jsx";
+
 // Import CSS
 import './App.scss';
 
