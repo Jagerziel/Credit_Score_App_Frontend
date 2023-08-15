@@ -1,8 +1,12 @@
-import React from 'react'
-import './Home.scss'
+import React from 'react';
+import './Home.scss';
+import Nav from '../../components/Navigation/Navigation';
 
-export default function Home () {
+export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <Nav />
+      <div>Home</div>
+    </>
+  );
 }

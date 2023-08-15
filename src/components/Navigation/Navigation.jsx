@@ -1,9 +1,8 @@
-import React from 'react'
-import './Navigation.scss'
+import React from 'react';
+import './Navigation.scss';
 
-
-export function Navigation () {
-  return (
-    <div>Navigation</div>
-  )
+function Navigation() {
+  return <div>Navigation</div>;
 }
+
+export default Navigation;
