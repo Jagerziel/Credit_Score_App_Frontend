@@ -16,10 +16,16 @@ export default function Home() {
     onAuthStateChanged(auth, (user) => setUser(user));
   }, []);
 
+
   return (
     <>
       <NavTest user={user} />
       <div>Home</div>
     </>
   );
+export default function Home () {
+
+  return (
+    <div>`Home`</div>
+  )
 }

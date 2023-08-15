@@ -27,6 +27,18 @@ TBC
 
 ## Team
 
+**Adam Li (UX/UI Designer)**
+<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+<!-- [GitHub](https://github.com/NAME) -->
+
+**Alaysia Veal (Software Engineer)**
+<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+<!-- [GitHub](https://github.com/NAME) -->
+
+**Jasmine Bass (Software Engineer)**
+<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+<!-- [GitHub](https://github.com/NAME) -->
+
 **Julia Heim (UX/UI Desinger)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
 <!-- [GitHub](https://github.com/NAME) -->
