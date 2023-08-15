@@ -1,0 +1,54 @@
+$height: 60px;
+
+.navigation {
+    height: $height;
+    background-color: rgb(138, 237, 255);
+    box-shadow: 0px 5px 5px rgb(171, 171, 171);
+    position: absolute;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 25px 5px 25px;
+    z-index: 1;
+}
+
+.navigation-background {
+    height: $height;
+    width: 100%;
+}
+
+.navigation-left-container {
+    border: 2px solid red;
+
+}
+
+.navigation-right-container {
+    border: 2px solid red;
+}
+
+.navigation-menu-container {
+    border: 2px solid grey;
+    width: 150px;
+    // height: 100px;
+    padding: 5px 0 5px 0;
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-menu-item {
+    // border: 2px solid green;
+    text-align: center;
+    padding: 5px;
+}
+
+.navigation-menu-item:hover {
+    cursor: pointer;
+    color: blue
+}
