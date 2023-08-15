@@ -1,5 +1,6 @@
 // Import React
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 // Import Data
 import { navItems } from '../../data/data'
@@ -36,7 +37,14 @@ export function Navigation () {
       >
         {navItems.map((item, index) => {
           return (
-            <div className='navigation-menu-item' key={index}>{item.name}</div>
+            <div className='navigation-menu-item' >
+              <NavLink 
+                key={index}
+                to={item.navUrl}
+              >
+                {item.name}
+              </NavLink>
+            </div>
           )
         })}
       </div>

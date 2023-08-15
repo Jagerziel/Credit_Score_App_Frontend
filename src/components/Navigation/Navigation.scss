@@ -39,10 +39,16 @@ $height: 60px;
     right: 0px;
     background: white;
     display: flex;
+    flex-direction: column;
 }
 
 .navigation-menu-item {
     // border: 2px solid green;
     text-align: center;
     padding: 5px;
+}
+
+.navigation-menu-item:hover {
+    cursor: pointer;
+    color: blue
 }

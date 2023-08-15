@@ -1,14 +1,14 @@
 export const navItems = [
     {
         name: "Login",
-        navUrl: "" 
+        navUrl: "/" 
     },
     {
         name: "Profile",
-        navUrl: "" 
+        navUrl: "/Profile" 
     },
     {
         name: "Dashboard",
-        navUrl: "" 
+        navUrl: "/Dashboard" 
     }
 ]
