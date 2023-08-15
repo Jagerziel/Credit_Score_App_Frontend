@@ -9,13 +9,13 @@ import './Navigation.scss'
 
 
 export function Navigation () {
+  // Track Menu Open status
   const [ menuOpen, setMenuOpen ] = useState(false)
 
   function handleMenu () {
     setMenuOpen(!menuOpen)
   }
 
-  console.log(menuOpen)
   return (
     <>
       <div className='navigation'>
@@ -36,7 +36,7 @@ export function Navigation () {
       >
         {navItems.map((item, index) => {
           return (
-            <div className='navigation-menu-item'>{item.name}</div>
+            <div className='navigation-menu-item' key={index}>{item.name}</div>
           )
         })}
       </div>
