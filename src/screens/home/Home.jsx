@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import './Home.scss';
 import { userInfo } from '../../App.js';
 

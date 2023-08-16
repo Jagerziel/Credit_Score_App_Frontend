@@ -67,53 +67,65 @@ export default function Home() {
     }
   }, [user]);
 
+  let userName = user ? user.reloadUserInfo.displayName : '';
+
   return (
-    <main>
-      <h1>Testing Firebase UID in form submission</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Credit Score:
-          <input
-            type="number"
-            value={creditScore}
-            onChange={(e) => setCreditScore(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Monthly Income:
-          <input
-            type="number"
-            value={monthlyIncome}
-            onChange={(e) => setMonthlyIncome(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Monthly Bills:
-          <input
-            type="number"
-            value={monthlyBills}
-            onChange={(e) => setMonthlyBills(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-      <DisplayTest tests={tests} />
-    </main>
+    <>
+      {user ? (
+        <div style={{ fontSize: '30px' }}>{`Welcome ${userName}`}</div>
+      ) : (
+        <div style={{ fontSize: '30px' }}>Home Screen: Please Login</div>
+      )}
+      <div className="test-wrapper">
+        <main>
+          <h1>Testing Firebase UID</h1>
+          <h1>form submission</h1>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Name:
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Credit Score:
+              <input
+                type="number"
+                value={creditScore}
+                onChange={(e) => setCreditScore(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Monthly Income:
+              <input
+                type="number"
+                value={monthlyIncome}
+                onChange={(e) => setMonthlyIncome(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Monthly Bills:
+              <input
+                type="number"
+                value={monthlyBills}
+                onChange={(e) => setMonthlyBills(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <button type="submit">Submit</button>
+          </form>
+        </main>
+        <DisplayTest tests={tests} />
+      </div>
+    </>
   );
 }
