@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      {user ? <div>{`Welcome ${userName}`}</div> : <div>Home Screen: Please Login</div>}
+      {user ? <div style={{fontSize: "30px"}}>{`Welcome ${userName}`}</div> : <div style={{fontSize: "30px"}}>Home Screen: Please Login</div>}
     </>
   );
   }
