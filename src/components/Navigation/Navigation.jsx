@@ -20,6 +20,7 @@ export function Navigation ( { user } ) {
     setMenuOpen(!menuOpen)
   }
 
+
   return (
     <>
       <div className='navigation'>
@@ -38,17 +39,30 @@ export function Navigation ( { user } ) {
       <div className='navigation-menu-container'
         style={{display: menuOpen ? "block" : "none" }}
       >
-        
-          <div className="navigation-menu-item">
-            Hello
+        { user ?      
+          <div 
+            className="navigation-menu-item"
+            onClick={() => logout()}
+          >
+            Logout
           </div>
+          :
+          <div 
+            className="navigation-menu-item"
+            onClick={() => login()}
+          >
+            Login
+          </div>
+        }
         
         {navItems.map((item, index) => {
           return (
-            <div className='navigation-menu-item' >
+            <div 
+              className='navigation-menu-item' 
+              key={index}
+            >
               <NavLink 
                 className='navigation-menu-item-linked'
-                key={index}
                 to={item.navUrl}
               >
                 {item.name}
