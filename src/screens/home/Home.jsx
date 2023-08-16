@@ -4,11 +4,12 @@ import { userInfo } from '../../App.js';
 
 export default function Home() {
   const user = useContext(userInfo);
-  console.log(user)
+  // console.log(user.reloadUserInfo.displayName)
+  let userName = user ? user.reloadUserInfo.displayName : ""
 
   return (
     <>
-      <div>Home</div>
+      {user ? <div>{`Welcome ${userName}`}</div> : <div>Home Screen: Please Login</div>}
     </>
   );
   }
