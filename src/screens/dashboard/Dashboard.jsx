@@ -16,7 +16,7 @@ export default function Dashboard () {
           <div>850</div>
         </div>
       </div>
-      <div>hello</div>
+      <div>PLACEHOLDER</div>
     </div>
   )
 }
