@@ -1,6 +1,6 @@
 .dashboard-container {
     // border: 2px solid red;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px - 70px);
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-top: 11px;
 }
 
 .dashboard-pie-needle-chart-container {
@@ -35,7 +36,7 @@
     width: 310px;
     margin:auto;
     box-sizing: border-box;
-    padding: 0px 25px
+    padding: 0px 25px 15px 25px;
 }
 
 .dashboard-score-title {
@@ -47,5 +48,6 @@
 .dashboard-score-result {
     font-size: 32px;
     color: black;
+    padding-bottom: 21px;
 }
 
