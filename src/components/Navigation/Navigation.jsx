@@ -18,6 +18,7 @@ export function Navigation () {
   const [ menuOpen, setMenuOpen ] = useState(false)
 
   const user = useContext(userInfo);
+  let userName = user ? user.reloadUserInfo.displayName : ""
 
   let currentUrl = useLocation().pathname
 
@@ -33,7 +34,7 @@ export function Navigation () {
           <div className='navigation-hamburger' onClick={handleMenu}>
             <img src={require("./hamburger.png")} height="24px" width="24px" alt="Menu"/>
           </div>
-          <div>Welcome</div>
+          {user ? <div>{`Welcome ${userName}`}!</div> : <div>Credit Score Application</div>}
         </div>
         <div className="navigation-right-container">
         { user ?      
