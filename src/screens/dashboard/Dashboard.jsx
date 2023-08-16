@@ -1,8 +1,16 @@
+// Import React
 import React from 'react'
+// Import Components
+import PieNeedleChart from '../../components/PieNeedleChart/PieNeedleChart.jsx'
+import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx'
+import DescLoggedOut from '../../components/Descriptions/DescLoggedOut.jsx'
+// Import Data
+import { userInputCategories } from '../../data/data.js'
+// Import CSS
 import './Dashboard.scss'
-import PieNeedleChart from '../../components/PieNeedleChart/PieNeedleChart'
 
 export default function Dashboard () {
+  
   return (
     <div className='dashboard-container'>
       <div className='dashboard-full-chart-container'>
@@ -16,7 +24,9 @@ export default function Dashboard () {
           <div>850</div>
         </div>
       </div>
-      <div>PLACEHOLDER</div>
+      <div className='dashboard-description-container'>
+        <DescLoggedOut title={userInputCategories[0].title} description={userInputCategories[0].description}/>
+      </div>
     </div>
   )
 }

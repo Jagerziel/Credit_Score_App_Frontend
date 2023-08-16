@@ -1,0 +1,32 @@
+.descLoggedOut-container {
+    // border: 2px solid red;
+    margin: auto;
+    height: 49px;
+    width: 390px;
+    background-color: #FFF9F9;
+    line-height: 49px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descLoggedOut-left-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.descLoggedOut-blue-v {
+    background: var(--color-primary);
+    height: 49px;
+    width: 6px;
+}
+
+.descLoggedOut-title {
+    padding: 0 0 0 33px;
+}
+
+.down-arrow {
+    // filter: invert(14%) sepia(98%) saturate(2687%) hue-rotate(191deg) brightness(93%) contrast(101%);
+    padding-right: 15px;
+}
