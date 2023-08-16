@@ -17,6 +17,7 @@ export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const user = useContext(userInfo);
+  let userName = user ? user.reloadUserInfo.displayName : ""
 
   let currentUrl = useLocation().pathname;
 
@@ -26,29 +27,35 @@ export function Navigation() {
 
   return (
     <>
-      <div className="navigation">
-        <div className="navigation-left-container">
-          CREDIT SCORE APPLICATION
+      <div className='navigation'>
+        <div className='navigation-left-container'>
+          <div className='navigation-hamburger' onClick={handleMenu}>
+            <img src={require("./hamburger.png")} height="24px" width="24px" alt="Menu"/>
+          </div>
+          {user ? <div>{`Welcome ${userName}`}!</div> : <div>Credit Score Application</div>}
         </div>
-        <div className="navigation-right-container" onClick={handleMenu}>
-          MENU
-        </div>
-      </div>
-      <div className="navigation-background"></div>
-      <div
-        className="navigation-menu-container"
-        style={{ display: menuOpen ? 'block' : 'none' }}
-      >
-        {user ? (
-          <div className="navigation-menu-item" onClick={() => logout()}>
+        <div className="navigation-right-container">
+        { user ?      
+          <div 
+            className="navigation-login"
+            onClick={() => logout()}
+          >
             Logout
           </div>
-        ) : (
-          <div className="navigation-menu-item" onClick={() => login()}>
+          :
+          <div 
+            className="navigation-login"
+            onClick={() => login()}
+          >
             Login
           </div>
-        )}
-
+        }
+        </div>
+      </div>
+      <div className='navigation-background'></div>
+      <div className='navigation-menu-container'
+        style={{display: menuOpen ? "block" : "none" }}
+      >
         {navItems.map((item, index) => {
           if (item.navUrl === currentUrl) {
             return <div key={index}></div>;

@@ -1,9 +1,13 @@
-import React from 'react'
+// Import React
+import React, { useContext } from 'react'
+// Import Data
+import { userInfo } from '../../App.js';
+// Import CSS
 import './UserInput.scss'
 
-
 export default function UserInput () {
-  return (
-    <div>UserInput</div>
-  )
+    const user = useContext(userInfo);
+    return (
+        <div>UserInput</div>
+    )
 }
