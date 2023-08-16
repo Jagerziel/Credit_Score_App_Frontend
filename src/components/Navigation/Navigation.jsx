@@ -1,9 +1,10 @@
 // Import React
-import React, { useState , useEffect } from 'react'
+import React, { useState , useEffect , useContext } from 'react'
 import { NavLink , useLocation } from 'react-router-dom'
 
 // Import Data
 import { navItems } from '../../data/data'
+import { userInfo } from '../../App.js';
 
 // Import Firebase
 import { login, logout } from '../../services/firebase.js';
@@ -12,9 +13,11 @@ import { login, logout } from '../../services/firebase.js';
 import './Navigation.scss'
 
 
-export function Navigation ( { user } ) {
+export function Navigation () {
   // Track Menu Open status
   const [ menuOpen, setMenuOpen ] = useState(false)
+
+  const user = useContext(userInfo);
 
   let currentUrl = useLocation().pathname
 

@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useContext } from 'react';
 import './Home.scss';
-// import NavTest from '../../components/NavTest/NavTest';
+import { userInfo } from '../../App.js';
 
-export default function Home( { user } ) {
-  console.log(user)
+export default function Home() {
+  const user = useContext(userInfo);
+  // console.log(user.reloadUserInfo.displayName)
+  let userName = user ? user.reloadUserInfo.displayName : ""
 
   return (
     <>
-      {/* <NavTest user={user} /> */}
-      <div>Home</div>
+      {user ? <div style={{fontSize: "30px"}}>{`Welcome ${userName}`}</div> : <div style={{fontSize: "30px"}}>Home Screen: Please Login</div>}
     </>
   );
   }
