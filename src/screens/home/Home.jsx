@@ -15,4 +15,4 @@ export default function Home() {
       {user ? <div style={{fontSize: "30px"}}>{`Welcome ${userName}`}</div> : <div style={{fontSize: "30px"}}>Home Screen: Please Login</div>}
     </>
   );
-  }
+}
