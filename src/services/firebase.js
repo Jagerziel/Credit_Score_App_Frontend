@@ -29,8 +29,19 @@ const provider = new GoogleAuthProvider();
 export const auth = getAuth(app);
 
 // Setup auth Functions
-export function login() {
-  return signInWithPopup(auth, provider);
+
+/* PREVIOUS CODE */
+// export function login() {
+//   return signInWithPopup(auth, provider);
+// }
+
+/* NEW CODE */
+export async function login() {
+  try {
+    await signInWithPopup(auth, provider)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export function logout() {
