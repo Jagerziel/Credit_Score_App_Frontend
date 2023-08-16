@@ -5,11 +5,14 @@ import { NavLink } from 'react-router-dom'
 // Import Data
 import { navItems } from '../../data/data'
 
+// Import Firebase
+import { login, logout } from '../../services/firebase.js';
+
 // Import CSS
 import './Navigation.scss'
 
 
-export function Navigation () {
+export function Navigation ( { user } ) {
   // Track Menu Open status
   const [ menuOpen, setMenuOpen ] = useState(false)
 
@@ -35,10 +38,16 @@ export function Navigation () {
       <div className='navigation-menu-container'
         style={{display: menuOpen ? "block" : "none" }}
       >
+        
+          <div className="navigation-menu-item">
+            Hello
+          </div>
+        
         {navItems.map((item, index) => {
           return (
             <div className='navigation-menu-item' >
               <NavLink 
+                className='navigation-menu-item-linked'
                 key={index}
                 to={item.navUrl}
               >

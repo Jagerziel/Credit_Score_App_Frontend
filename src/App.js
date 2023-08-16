@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation />
+      <Navigation user={user}/>
       <Routes>
         <Route path="/" element={<Home user={user} />} />
         <Route path="/Profile" element={<Profile />} />

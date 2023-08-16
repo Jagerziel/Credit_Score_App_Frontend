@@ -3,6 +3,7 @@ import './Home.scss';
 // import NavTest from '../../components/NavTest/NavTest';
 
 export default function Home( { user } ) {
+  console.log(user)
 
   return (
     <>
