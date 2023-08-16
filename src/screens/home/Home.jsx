@@ -1,6 +1,9 @@
+// Import React
 import React, { useEffect, useState , useContext } from 'react';
-import './Home.scss';
+// Import Data
 import { userInfo } from '../../App.js';
+// Import CSS
+import './Home.scss';
 
 export default function Home() {
   const user = useContext(userInfo);
