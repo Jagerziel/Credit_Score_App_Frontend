@@ -1,90 +1,75 @@
 // Import React
-import React, { useState , useEffect , useContext } from 'react'
-import { NavLink , useLocation } from 'react-router-dom'
+import React, { useState, useContext } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 // Import Data
-import { navItems } from '../../data/data'
+import { navItems } from '../../data/data';
 import { userInfo } from '../../App.js';
 
 // Import Firebase
 import { login, logout } from '../../services/firebase.js';
 
 // Import CSS
-import './Navigation.scss'
+import './Navigation.scss';
 
-
-export function Navigation () {
+export function Navigation() {
   // Track Menu Open status
-  const [ menuOpen, setMenuOpen ] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const user = useContext(userInfo);
 
-  let currentUrl = useLocation().pathname
+  let currentUrl = useLocation().pathname;
 
-  function handleMenu () {
-    setMenuOpen(!menuOpen)
+  function handleMenu() {
+    setMenuOpen(!menuOpen);
   }
-
 
   return (
     <>
-      <div className='navigation'>
+      <div className="navigation">
         <div className="navigation-left-container">
           CREDIT SCORE APPLICATION
         </div>
-        <div 
-          className='navigation-right-container'
-          onClick={handleMenu}
-        >
+        <div className="navigation-right-container" onClick={handleMenu}>
           MENU
         </div>
-
       </div>
-      <div className='navigation-background'></div>
-      <div className='navigation-menu-container'
-        style={{display: menuOpen ? "block" : "none" }}
+      <div className="navigation-background"></div>
+      <div
+        className="navigation-menu-container"
+        style={{ display: menuOpen ? 'block' : 'none' }}
       >
-        { user ?      
-          <div 
-            className="navigation-menu-item"
-            onClick={() => logout()}
-          >
+        {user ? (
+          <div className="navigation-menu-item" onClick={() => logout()}>
             Logout
           </div>
-          :
-          <div 
-            className="navigation-menu-item"
-            onClick={() => login()}
-          >
+        ) : (
+          <div className="navigation-menu-item" onClick={() => login()}>
             Login
           </div>
-        }
-        
+        )}
+
         {navItems.map((item, index) => {
           if (item.navUrl === currentUrl) {
-            return (
-              <div key={index}></div>
-            )
+            return <div key={index}></div>;
           }
           return (
-            <div 
-              className='navigation-menu-item' 
-              key={index}
-            >
+            <div className="navigation-menu-item" key={index}>
               {
-                <NavLink 
-                  className='navigation-menu-item-linked'
+                <NavLink
+                  className="navigation-menu-item-linked"
                   to={item.navUrl}
                   onClick={handleMenu}
-              >
-                {item.name}
-              </NavLink>}
+                >
+                  {item.name}
+                </NavLink>
+              }
             </div>
-          )
+          );
         })}
       </div>
     </>
-  )
+  );
 }
 
 export default Navigation;
