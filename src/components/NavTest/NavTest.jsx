@@ -1,5 +1,5 @@
 import React from 'react';
-import { login, logout } from '../../firebase';
+import { login, logout } from '../../services/firebase';
 
 function NavTest(props) {
   console.log(props);
