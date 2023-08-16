@@ -27,25 +27,18 @@ TBC
 
 ## Team
 
-**Adam Li (UX/UI Designer)**
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/NAME) -->
 
 **Alaysia Veal (Software Engineer)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/NAME) -->
+[GitHub](https://github.com/AlaysiaVeal)
 
-**Jasmine Bass (Software Engineer)**
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/NAME) -->
-
-**Julia Heim (UX/UI Desinger)**
+**Kimberly Mannette (UX/UI Designer)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
 <!-- [GitHub](https://github.com/NAME) -->
 
 **Kate Crawford (Data Science Engineer)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-[GitHub](https://github.com/codewithkate)
+<!-- [GitHub](https://github.com/codewithkate) -->
 
 **Mark Harris (Data Science Engineer)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
@@ -61,8 +54,5 @@ TBC
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
 
-**Vivian Huynh (UX/UI Designer)**
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/NAME) -->
 
  
