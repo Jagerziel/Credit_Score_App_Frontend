@@ -6,53 +6,60 @@ import { userInfo } from '../../App.js';
 export default function Home() {
   const user = useContext(userInfo);
 
-  const [name, setName] = useState('');
-  const [creditScore, setCreditScore] = useState('');
-  const [monthlyIncome, setMonthlyIncome] = useState('');
-  const [monthlyBills, setMonthlyBills] = useState('');
+  const formFields = {
+    name: '',
+    creditScore: '',
+    monthlyIncome: '',
+    monthlyBills: '',
+  };
+  const [newForm, setNewForm] = useState(formFields);
   const [tests, setTests] = useState(null);
   const getTestsRef = useRef(null);
+
+  const handleChange = (event) => {
+    setNewForm({
+      ...newForm,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const URL = 'http://localhost:4000/test/';
 
   const getTests = async () => {
     const token = await user.getIdToken();
-    console.log(token);
+    // console.log(token);
+    // this will log the json web token to the console in base64 format
 
-    const response = await fetch(URL);
+    const response = await fetch(URL, {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+    });
     const data = await response.json();
     setTests(data);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const createTest = async (newForm) => {
+    if (!user) return; // prevent function from executing code below without user
 
-    const formData = {
-      name,
-      creditScore: parseInt(creditScore),
-      monthlyIncome: parseFloat(monthlyIncome),
-      monthlyBills: parseFloat(monthlyBills),
-    };
+    const token = await user.getIdToken();
 
-    try {
-      const response = await fetch(URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    await fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify(newForm),
+    });
+    getTests();
+  };
 
-      if (response.ok) {
-        // Handle successful response
-        console.log('Data sent successfully');
-      } else {
-        // Handle error response
-        console.error('Error sending data');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault(); // this prevents a page refresh
+    createTest(newForm);
+    setNewForm(formFields); // reset form to empty fields
   };
 
   useEffect(() => {
@@ -64,6 +71,7 @@ export default function Home() {
       getTestsRef.current();
     } else {
       setTests(null);
+      // when user logs out their information is removed from state
     }
   }, [user]);
 
@@ -85,8 +93,9 @@ export default function Home() {
               Name:
               <input
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                name="name"
+                value={newForm.name}
+                onChange={handleChange}
                 required
               />
             </label>
@@ -95,8 +104,9 @@ export default function Home() {
               Credit Score:
               <input
                 type="number"
-                value={creditScore}
-                onChange={(e) => setCreditScore(e.target.value)}
+                name="creditScore"
+                value={newForm.creditScore}
+                onChange={handleChange}
                 required
               />
             </label>
@@ -105,8 +115,9 @@ export default function Home() {
               Monthly Income:
               <input
                 type="number"
-                value={monthlyIncome}
-                onChange={(e) => setMonthlyIncome(e.target.value)}
+                name="monthlyIncome"
+                value={newForm.monthlyIncome}
+                onChange={handleChange}
                 required
               />
             </label>
@@ -115,8 +126,9 @@ export default function Home() {
               Monthly Bills:
               <input
                 type="number"
-                value={monthlyBills}
-                onChange={(e) => setMonthlyBills(e.target.value)}
+                name="monthlyBills"
+                value={newForm.monthlyBills}
+                onChange={handleChange}
                 required
               />
             </label>

@@ -8,14 +8,15 @@ export default function DisplayTest({ tests }) {
 
   const loaded = () => {
     return tests.map((test) => (
-      <div key={test.id} className="test-data">
-        <main>
-          <h2>User From DB</h2>
-          <p>Name: {test.name}</p>
+      <div key={test._id} className="test-data">
+        <div className="test-database">
+          <h2>User {test.name}</h2>
+          <h2>From DB</h2>
+          {/* <p>Name: {test.name}</p> */}
           <p>Credit Score: {test.creditScore}</p>
           <p>Monthly Income: {test.monthlyIncome}</p>
           <p>Monthly Bills: {test.monthlyBills}</p>
-        </main>
+        </div>
       </div>
     ));
   };
