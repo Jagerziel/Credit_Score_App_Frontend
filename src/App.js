@@ -1,5 +1,5 @@
 // Import React
-import { useEffect, useState } from "react";
+import React, { useEffect, useState , createContext } from "react";
 import { Route, Routes } from "react-router-dom";
 // Import Components
 import Home from "./screens/home/Home.jsx"
@@ -15,6 +15,8 @@ import { onAuthStateChanged } from "firebase/auth";
 // Import CSS
 import './App.scss';
 
+export const userInfo = React.createContext();
+
 function App() {
   const [user, setUser] = useState(null);
 
@@ -25,12 +27,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation user={user}/>
-      <Routes>
-        <Route path="/" element={<Home user={user} />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-      </Routes>
+      <userInfo.Provider value={user}>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
+        </Routes>
+
+      </userInfo.Provider>
     </div>
   );
 }

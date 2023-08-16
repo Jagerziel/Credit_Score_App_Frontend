@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useContext } from 'react';
 import './Home.scss';
-// import NavTest from '../../components/NavTest/NavTest';
+import { userInfo } from '../../App.js';
 
-export default function Home( { user } ) {
+export default function Home() {
+  const user = useContext(userInfo);
   console.log(user)
 
   return (
     <>
-      {/* <NavTest user={user} /> */}
       <div>Home</div>
     </>
   );
