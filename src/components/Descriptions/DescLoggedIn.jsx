@@ -9,7 +9,7 @@ export default function DescLoggedIn( { title , description , userInput , setUse
   const [ openMenu , setOpenMenu ] = useState(false)
 
   const placeholderList = [
-    "MM-DD-YYYY", // Date of Birth
+    "25", // Date of Birth
     "5", // # of Dependents
     "50,000", // Total Income
     "35,000", // Total Debt

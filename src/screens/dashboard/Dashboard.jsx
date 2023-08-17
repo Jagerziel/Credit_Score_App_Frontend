@@ -1,5 +1,6 @@
 // Import React
 import React, { useState , useContext, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 // Import Components
 import PieNeedleChart from '../../components/PieNeedleChart/PieNeedleChart.jsx'
 import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx'
@@ -56,6 +57,9 @@ export default function Dashboard () {
   
   return (
     <div className='dashboard-container'>
+      <div className='dashboard-return-home-container'>
+        <NavLink className='dashboard-return-home' to={"/"}>Back</NavLink>
+      </div>
       <div className='dashboard-full-chart-container'>
         <div className='dashboard-score-title'>Your Score</div>
         <div className='dashboard-score-result'>{score + 300}</div>

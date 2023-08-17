@@ -5,7 +5,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px 0 40px 0;
+    padding: 0px 0px 15px 0px;
+}
+
+.dashboard-return-home-container {
+    // border: 2px solid red;
+    width: calc(100% - 44px);
+    padding: 15px 22px 15px 22px;
+}
+
+.dashboard-return-home {
+    // border: 2px solid red;
+    color: #000; 
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.dashboard-return-home:hover {
+    cursor: pointer;
+    color: var(--color-primary)
 }
 
 .dashboard-full-chart-container {
