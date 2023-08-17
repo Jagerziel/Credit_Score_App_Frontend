@@ -11,9 +11,10 @@ export default function InfoModal( { score } ) {
         <img 
             className="infoModal-questionIcon" 
             src={require("./interrogation-mark.png")} 
-            alt="abc" 
+            alt="?" 
             height="17px"
             width="17px"
+            onClick={() => setOpen(!open)}
         />
     )
 }
