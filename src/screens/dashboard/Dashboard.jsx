@@ -6,8 +6,9 @@ import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx'
 import DescLoggedOut from '../../components/Descriptions/DescLoggedOut.jsx'
 import InfoModal from '../../components/InfoModal/InfoModal.jsx'
 // Import Data
-import { userInputCategories , scoringUpperBound } from '../../data/data.js'
+import { userInputCategories , scoringUpperBound , scoreCard , baseScore } from '../../data/data.js'
 import { userInfo } from '../../App.js'
+import { calcScoreDesc } from '../../data/functions.js'
 // Import Firebase
 import { login } from '../../services/firebase.js';
 // Import CSS
@@ -32,13 +33,11 @@ export default function Dashboard () {
   const user = useContext(userInfo);
   let loggedIn = user ? false : true
 
-  function calcScore(score , scoringUpperBound ) {
-    for (let i = 0; i < scoringUpperBound.length; i++ ) {
-      if (score < scoringUpperBound[i][0]) {
-        return scoringUpperBound[i][1]
-      }
-    }
+  function calcScore( scoreCard , baseScore ) {
+
   }
+
+
 
   useEffect(() => {
     setUserInput({
@@ -63,7 +62,7 @@ export default function Dashboard () {
         <div className='dashboard-score-desc'>
           <div style={{padding: "0 5px 0 0"}}>
             {
-              calcScore(score + 300, scoringUpperBound)
+              calcScoreDesc(score + 300, scoringUpperBound)
             }
           </div>
           <InfoModal score={ score }/>

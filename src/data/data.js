@@ -19,9 +19,9 @@ export const navItems = [
 
 export const userInputCategories = [
   {
-    title: "Date of Birth",
+    title: "Age",
     description: {
-      p1: "Your date of birth is used in credit scoring as part of identity verification to ensure accurate reporting and prevent fraud. It helps credit bureaus and lenders confirm an individual's identity and match credit information to the correct person, enhancing the accuracy and integrity of credit reports and scores",
+      p1: "Age plays a role in your credit score primarily through the length of your credit history, which assesses the age of your oldest and newest credit accounts. A longer credit history tends to positively influence your score, as it provides more data for credit scoring models to evaluate your financial behavior and payment habits over time.",
       p2: null
     }
   },
