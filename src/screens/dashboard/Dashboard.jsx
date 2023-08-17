@@ -13,8 +13,23 @@ import { login } from '../../services/firebase.js';
 import './Dashboard.scss'
 
 export default function Dashboard () {
+  const [ userInput , setUserInput ] = useState({
+    item_1: 0,  // Date of Birth
+    item_2: 0,  // # of Dependents
+    item_3: 0,  // Total Income
+    item_4: 0,  // Total Debt
+    item_5: 0,  // Total Accounts
+    item_6: 0,  // Revolving Utilization
+    item_7: 0,  // # of Real Estate Loans
+    item_8: 0,  // # of Times 30-59 Days Past Due
+    item_9: 0,  // # of Times 60-89 Days Past Due
+    item_10: 0  //# of Times 90+ Days Past Due
+  })
+
   const user = useContext(userInfo);
   let loggedIn = user ? false : true
+
+
   
   return (
     <div className='dashboard-container'>
@@ -42,7 +57,7 @@ export default function Dashboard () {
         }
       </div>
       <div className='dashboard-description-container-logout' style={{display: user ? "none" : "block"}}>
-
+        <DescLoggedIn title={userInputCategories[0].title} description={userInputCategories[0].description} userInput={userInput} setUserInput={setUserInput}/>
       </div>
       {loggedIn ? <div className='dashboard-login-button' onClick={() => login()}>Log In</div> : <></>}
     </div>
