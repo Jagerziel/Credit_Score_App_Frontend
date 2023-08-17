@@ -9,7 +9,7 @@ const data = [
   { name: 'B', value: 90, color: '#E9C499' },
   { name: 'C', value: 70, color: '#ECE1A7' },
   { name: 'D', value: 60, color: '#D1F09E' },
-  { name: 'D', value: 50, color: '#89EEA4' },
+  { name: 'E', value: 50, color: '#89EEA4' },
 ];
 const cx = 150;
 const cy = 150;
