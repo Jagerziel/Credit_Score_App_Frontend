@@ -18,14 +18,8 @@ export default function Home() {
 
   return (
     <>
-    <body style={{backgroundColor:'--background-color' }}>
-      {user ? (
-        <div style={{ fontSize: '30px' }}>
-          <h2>{`Welcome ${userName}`}</h2>
-          </div>
-      ) : (
-
-        <div style={{ textAlign:'center'}} ><p className='text' style={{margin:'15px'}}>Financial decisions aren't static, and your credit score shouldn't be either!</p>
+      
+        <div style={{ textAlign:'center',minHeight:'calc(100vh - 60px)', backgroundColor:'var(--background-color)'}} ><p className='text' style={{margin:'15px'}}>Financial decisions aren't static, and your credit score shouldn't be either!</p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <img src={image2}></img>
         </div>
@@ -38,13 +32,11 @@ export default function Home() {
         <Link to='/Dashboard'><button style={{ width: '386px', height: '34px', backgroundColor: 'var(--color-primary)', color: 'var(--color-secondary)' }}>See How Your Score is Calculated <img src={image} style={{width:'10px', height:'10px' }}></img></button></Link>
         <p style={{marginTop: '10px' }}>No credit card required</p>
         <br></br>
-        <div style={{ marginRight:'20px', marginLeft: '20px', backgroundColor:  '#D9D9D9', marginBottom:'30px'}}>
-        <p >*Credit score calculated based on ScoreEase model. Your lender or insurer may use a different score or another type of score altogether. </p>
-        <p>*Results will vary. All information provided on this web site is provided “as is” with all faults without warranty of any kind, either expressed or implied. ScoreEase shall not be liable for any indirect, special, consequential, or incidental damages arising out of the use or inability to use this site or from the use of or reliance on the information present.</p>
+        <div style={{ backgroundColor:  '#D9D9D9', marginBottom:'30px'}}>
+        <p style={{margin: '10px' ,marginBottom:'15px'}}>*Credit score calculated based on ScoreEase model. Your lender or insurer may use a different score or another type of score altogether. </p>
+        <p style={{margin:'10px',marginBottom:'20px'}}>*Results will vary. All information provided on this web site is provided “as is” with all faults without warranty of any kind, either expressed or implied. ScoreEase shall not be liable for any indirect, special, consequential, or incidental damages arising out of the use or inability to use this site or from the use of or reliance on the information present.</p>
         </div>
         </div>
-      )}
-      </body>
     </>
   );
 }
