@@ -31,3 +31,16 @@ export const createInfo = async (user, input) => {
     body: JSON.stringify(input),
   });
 };
+
+export const updateInfo = async (id, updatedInfo) => {
+  const response = await fetch(URL + id, {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'Application/json',
+    },
+    body: JSON.stringify(updatedInfo),
+  });
+  if (response.ok) {
+    return await response.json();
+  }
+};
