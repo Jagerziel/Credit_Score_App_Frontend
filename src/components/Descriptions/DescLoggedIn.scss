@@ -39,6 +39,7 @@
 
 .desc-input {
     // border: 2px solid red;
+    background: var(--color-secondary);
     padding: 0 0 0 33px;
     height: 49px;
     width: 300px;
@@ -46,3 +47,11 @@
     font-size: 16px;
 }
 
+.descLoggedIn-desc-container {
+    // border: 2px solid red;
+    background-color: #FFF9F9;
+}
+
+.descLoggedIn-open-description {
+    padding: 20px 14px 20px 14px;
+}

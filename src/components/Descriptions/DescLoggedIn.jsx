@@ -46,9 +46,11 @@ export default function DescLoggedIn( { title , description , userInput , setUse
               style={{transform: openMenu ? "rotate(180deg)" : "rotate(0deg", paddingLeft: openMenu ? "15px" : "0"}}
               onClick={() => setOpenMenu(!openMenu)}
             />
-
-
         </div>
+        <div className='descLoggedIn-desc-container' style={{display: openMenu ? "block" : "none"}}>
+          <div className='descLoggedIn-open-description'>{description}</div>          
+        </div>
+        
     </div>
   );
 }
