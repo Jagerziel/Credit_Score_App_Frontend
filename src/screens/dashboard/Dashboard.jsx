@@ -26,6 +26,8 @@ export default function Dashboard () {
     item_9: 0   // # of Times 90+ Days Past Due
   })
 
+  const [ score , setScore ] = useState(500)
+
   const user = useContext(userInfo);
   let loggedIn = user ? false : true
   console.log(userInput)
@@ -51,7 +53,7 @@ export default function Dashboard () {
         <div className='dashboard-score-title'>Your Score</div>
         <div className='dashboard-score-result'>000</div>
         <div className='dashboard-pie-needle-chart-container'>
-          <PieNeedleChart />
+          <PieNeedleChart score={score}/>
         </div>
         <div className='dashboard-bounds-container'>
           <div>300</div>
