@@ -40,7 +40,8 @@ export default function DescLoggedOut( { title , description }) {
             />
             <div className='descLoggedOut-open-title'>{title}</div>
           </div>
-          <div className='descLoggedOut-open-description'>{description}</div>
+          <div className='descLoggedOut-open-description'>{description.p1}</div>
+          <div className='descLoggedOut-open-description'>{description.p2}</div>
         </div>
       }
     </>
