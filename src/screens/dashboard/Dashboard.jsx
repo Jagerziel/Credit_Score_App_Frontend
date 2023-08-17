@@ -29,7 +29,7 @@ export default function Dashboard () {
           <div>850</div>
         </div>
       </div>
-      <div className='dashboard-description-container'>
+      <div className='dashboard-description-container-logout' style={{display: user ? "none" : "block"}}>
         {
           userInputCategories.map((data, index) => {
             return (
@@ -40,6 +40,9 @@ export default function Dashboard () {
             )
           })
         }
+      </div>
+      <div className='dashboard-description-container-logout' style={{display: user ? "none" : "block"}}>
+
       </div>
       {loggedIn ? <div className='dashboard-login-button' onClick={() => login()}>Log In</div> : <></>}
     </div>

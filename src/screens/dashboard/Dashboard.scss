@@ -1,6 +1,6 @@
 .dashboard-container {
     // border: 2px solid red;
-    // min-height: calc(100vh - 60px - 70px);
+    min-height: calc(100vh - 100px - 70px);
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
     padding-bottom: 21px;
 }
 
-.dashboard-description-container {
+.dashboard-description-container-logout {
     // border: 2px solid red;
     width: 100%;
     padding: 39px 0px 22px 0px;
