@@ -1,8 +1,6 @@
 // import { API_URLS } from '../services/apiConfig.js';
 
-const URL = 'http://localhost:4000/info/';
-
-console.log(URL + ' this is the url');
+const URL = 'http://localhost:4000/test/';
 
 export const getInfo = async (user) => {
   const token = await user.getIdToken();
