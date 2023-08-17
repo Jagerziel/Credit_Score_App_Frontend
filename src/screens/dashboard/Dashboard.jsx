@@ -4,8 +4,9 @@ import React, { useState , useContext, useEffect } from 'react'
 import PieNeedleChart from '../../components/PieNeedleChart/PieNeedleChart.jsx'
 import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx'
 import DescLoggedOut from '../../components/Descriptions/DescLoggedOut.jsx'
+import InfoModal from '../../components/InfoModal/InfoModal.jsx'
 // Import Data
-import { userInputCategories } from '../../data/data.js'
+import { userInputCategories , scoringUpperBound } from '../../data/data.js'
 import { userInfo } from '../../App.js'
 // Import Firebase
 import { login } from '../../services/firebase.js';
@@ -26,9 +27,20 @@ export default function Dashboard () {
     item_9: 0   // # of Times 90+ Days Past Due
   })
 
+  const [ score , setScore ] = useState(500)
+
   const user = useContext(userInfo);
   let loggedIn = user ? false : true
   console.log(userInput)
+
+  function calcScore(score , scoringUpperBound ) {
+    for (let i = 0; i < scoringUpperBound.length; i++ ) {
+      if (score < scoringUpperBound[i][0]) {
+        return scoringUpperBound[i][1]
+      }
+    }
+  }
+  console.log(score)
 
   useEffect(() => {
     setUserInput({
@@ -49,9 +61,17 @@ export default function Dashboard () {
     <div className='dashboard-container'>
       <div className='dashboard-full-chart-container'>
         <div className='dashboard-score-title'>Your Score</div>
-        <div className='dashboard-score-result'>000</div>
+        <div className='dashboard-score-result'>{score + 300}</div>
+        <div className='dashboard-score-desc'>
+          <div style={{padding: "0 5px 0 0"}}>
+            {
+              calcScore(score + 300, scoringUpperBound)
+            }
+          </div>
+          <InfoModal score={ score }/>
+        </div>
         <div className='dashboard-pie-needle-chart-container'>
-          <PieNeedleChart />
+          <PieNeedleChart score={score}/>
         </div>
         <div className='dashboard-bounds-container'>
           <div>300</div>

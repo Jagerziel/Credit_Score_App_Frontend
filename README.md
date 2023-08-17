@@ -12,6 +12,7 @@ TBC
 
 ### Dependencies
  - axios
+ - firebase
  - framer-motion
  - react
  - react-dom
@@ -33,15 +34,15 @@ TBC
 [GitHub](https://github.com/AlaysiaVeal)
 
 **Kimberly Mannette (UX/UI Designer)**
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/NAME) -->
+[LinkedIn](https://www.linkedin.com/in/kimberlymannette/) |
+[GitHub](https://github.com/kimberlymannette)
 
 **Kate Crawford (Data Science Engineer)**
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-<!-- [GitHub](https://github.com/codewithkate) -->
+[GitHub](https://github.com/codewithkate)
 
 **Mark Harris (Data Science Engineer)**
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+[LinkedIn](https://www.linkedin.com/in/markcharris1/) |
 [GitHub](https://github.com/MarkCHarris)
 
 **Martin Fitzpatrick (Software Engineer)**

@@ -5,15 +5,16 @@ import './PieNeedleChart.scss'
 
 const RADIAN = Math.PI / 180;
 const data = [
-  { name: 'A', value: 20, color: '#F3ABB0' },
-  { name: 'B', value: 40, color: '#ECE1A7' },
-  { name: 'C', value: 20, color: '#89EEA4' },
+  { name: 'A', value: 280, color: '#F3ABB0' },
+  { name: 'B', value: 90, color: '#E9C499' },
+  { name: 'C', value: 70, color: '#ECE1A7' },
+  { name: 'D', value: 60, color: '#D1F09E' },
+  { name: 'E', value: 50, color: '#89EEA4' },
 ];
 const cx = 150;
 const cy = 150;
 const iR = 75;
 const oR = 150;
-const value = 50;
 
 const needle = (value, data, cx, cy, iR, oR, color) => {
   let total = 0;
@@ -40,30 +41,28 @@ const needle = (value, data, cx, cy, iR, oR, color) => {
   ];
 };
 
-export default class PieNeedleChart extends PureComponent {
-  render() {
-    return (
-        <div className='pie-needle-chart'>
-            <PieChart width={310} height={165}>
-                <Pie
-                  dataKey="value"
-                  startAngle={180}
-                  endAngle={0}
-                  data={data}
-                  cx={cx}
-                  cy={cy}
-                  innerRadius={iR}
-                  outerRadius={oR}
-                  fill="#8884d8"
-                  stroke="none"
-                >
-                  {data.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                {needle(value, data, cx, cy, iR, oR, '#004B82')}
-            </PieChart>
-        </div>
-    );
-  }
+export default function PieNeedleChart ( { score } ) {
+  return (
+      <div className='pie-needle-chart'>
+          <PieChart width={310} height={165}>
+              <Pie
+                dataKey="value"
+                startAngle={180}
+                endAngle={0}
+                data={data}
+                cx={cx}
+                cy={cy}
+                innerRadius={iR}
+                outerRadius={oR}
+                fill="#8884d8"
+                stroke="none"
+              >
+                {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                ))}
+              </Pie>
+              {needle(score, data, cx, cy, iR, oR, '#004B82')}
+          </PieChart>
+      </div>
+  );
 }
