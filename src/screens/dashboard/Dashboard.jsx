@@ -25,7 +25,17 @@ export default function Dashboard () {
         </div>
       </div>
       <div className='dashboard-description-container'>
-        <DescLoggedOut title={userInputCategories[0].title} description={userInputCategories[0].description}/>
+        {
+          userInputCategories.map((data, index) => {
+            return (
+              <>
+                <DescLoggedOut title={userInputCategories[index].title} description={userInputCategories[index].description}/>
+                <div style={{padding: "17px"}}></div>
+              </>
+            )
+          })
+        }
+        
       </div>
     </div>
   )
