@@ -28,10 +28,11 @@ export default function Dashboard () {
   })
 
   const [ score , setScore ] = useState(500)
-
+  
   const user = useContext(userInfo);
+  const [ userInformation , setUserInformation ] = useState(null)
   let loggedIn = user ? false : true
-  console.log(userInput)
+  // console.log(userInput)
 
   function calcScore(score , scoringUpperBound ) {
     for (let i = 0; i < scoringUpperBound.length; i++ ) {
@@ -40,7 +41,13 @@ export default function Dashboard () {
       }
     }
   }
-  console.log(score)
+  // console.log(score)
+
+  useEffect(() => {
+    if (user !== null) setUserInformation(user)
+    setUserInformation(null)
+
+  },[user])
 
   useEffect(() => {
     setUserInput({
@@ -55,6 +62,7 @@ export default function Dashboard () {
       item_8: 0,  // # of Times 60-89 Days Past Due
       item_9: 0   // # of Times 90+ Days Past Due
     })
+    console.log(userInformation)
   },[user])
   
   return (
