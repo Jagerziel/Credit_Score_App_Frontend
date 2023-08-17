@@ -5,9 +5,11 @@ import './PieNeedleChart.scss';
 
 const RADIAN = Math.PI / 180;
 const data = [
-  { name: 'A', value: 20, color: '#F3ABB0' },
-  { name: 'B', value: 40, color: '#ECE1A7' },
-  { name: 'C', value: 20, color: '#89EEA4' },
+  { name: 'A', value: 280, color: '#F3ABB0' },
+  { name: 'B', value: 90, color: '#ECE1A7' },
+  { name: 'C', value: 70, color: '#89EEA4' },
+  { name: 'D', value: 60, color: '#555555' },
+  { name: 'D', value: 50, color: '#999999' },
 ];
 const cx = 150;
 const cy = 150;
@@ -45,7 +47,7 @@ const needle = (value, data, cx, cy, iR, oR, color) => {
 };
 
 export default class PieNeedleChart extends PureComponent {
-  render() {
+  render( ) {
     return (
       <div className="pie-needle-chart">
         <PieChart width={310} height={165}>
