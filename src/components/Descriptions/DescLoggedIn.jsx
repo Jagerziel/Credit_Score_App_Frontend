@@ -53,7 +53,6 @@ export default function DescLoggedIn( { title , description , userInput , setUse
           <div className='descLoggedIn-open-description'>{description.p1}</div>  
           <div className='descLoggedIn-open-description'>{description.p2}</div>           
         </div>
-        
     </div>
   );
 }
