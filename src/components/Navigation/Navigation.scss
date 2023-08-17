@@ -2,8 +2,8 @@ $height: 60px;
 
 .navigation {
     height: $height;
-    background-color: var(--background-color);
-    position: absolute;
+    background-color: #FFF;
+    position: fixed;
     width: 100vw;
     box-sizing: border-box;
     display: flex;
