@@ -47,7 +47,7 @@ const needle = (value, data, cx, cy, iR, oR, color) => {
 };
 
 export default class PieNeedleChart extends PureComponent {
-  render( ) {
+  render( props ) {
     return (
       <div className="pie-needle-chart">
         <PieChart width={310} height={165}>

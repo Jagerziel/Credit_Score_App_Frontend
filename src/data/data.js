@@ -89,3 +89,11 @@ export const userInputCategories = [
     }
   }
 ]
+
+export const scoringUpperBound = [
+  [579, "Poor"],
+  [669, "Fair"],
+  [739, "Good"],
+  [799, "Very Good"],
+  [850, "Excellent"]
+]
