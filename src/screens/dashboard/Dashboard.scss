@@ -28,6 +28,16 @@
     justify-content: center;
 }
 
+.dashboard-score-desc {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 21px;
+}
+
+
+
 .dashboard-bounds-container {
     // border: 2px solid red;
     display: flex;
@@ -48,7 +58,6 @@
 .dashboard-score-result {
     font-size: 32px;
     color: black;
-    padding-bottom: 21px;
 }
 
 .dashboard-description-container-logout {
