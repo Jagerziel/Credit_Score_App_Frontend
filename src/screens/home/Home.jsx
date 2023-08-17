@@ -4,6 +4,11 @@ import React, { useEffect, useState , useContext } from 'react';
 import { userInfo } from '../../App.js';
 // Import CSS
 import './Home.scss';
+import { Link } from 'react-router-dom';
+import image from '../../images/arrow.png'
+import image2 from '../../images/piechart.png'
+import PieNeedleChart from '../../components/PieNeedleChart/PieNeedleChart.jsx';
+import Dashboard from '../dashboard/Dashboard.jsx';
 
 export default function Home() {
   const user = useContext(userInfo);
@@ -13,9 +18,28 @@ export default function Home() {
   return (
     <>
       {user ? (
-        <div style={{ fontSize: '30px' }}>{`Welcome ${userName}`}</div>
+        <div style={{ fontSize: '30px' }}>
+          <h2>{`Welcome ${userName}`}</h2>
+          </div>
       ) : (
-        <div style={{ fontSize: '30px' }}>Home Screen: Please Login</div>
+        <div style={{backgroundColor:'--background-color' , textAlign:'center'}} ><p className='text'>Financial decisions aren't static, and your credit score shouldn't be either!</p>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <img src={image2}></img>
+        </div>
+        <p className='text'>Reshaping the landscape of credit assessment by leveraging the power of</p>
+        <div style={{ display: 'grid', placeItems: 'center' ,marginTop:'15px', marginBottom:'15px'}}>
+        <p className='text'style={{ display: 'flex', alignItems: 'center' }}><div style= {{color: 'var(--color-primary)' , marginRight: '10px'}}>&#x2713;</div>Comprehensive Data Analysis</p>
+        <p className='text'style={{ display: 'flex', alignItems: 'center' }}><div style= {{color: 'var(--color-primary)' , marginLeft:'-80px',marginRight: '10px'}}>&#x2713;</div>Real Time Updates</p>
+        <p  className='text'style={{ display: 'flex', alignItems: 'center' }}> <div style= {{color: 'var(--color-primary)' , marginRight: '10px'}}>&#x2713;</div> A Forward Looking Perspective</p>
+        </div>
+        <Link to='/Dashboard'><button style={{ width: '386px', height: '34px', backgroundColor: 'var(--color-primary)', color: 'var(--color-secondary)' }}>See How Your Score is Calculated <img src={image} style={{width:'10px', height:'10px' }}></img></button></Link>
+        <p style={{marginTop: '10px' }}>No credit card required</p>
+        <br></br>
+        <div style={{ marginRight:'20px', marginLeft: '20px', backgroundColor:  '#D9D9D9'}}>
+        <p >*Credit score calculated based on ScoreEase model. Your lender or insurer may use a different score or another type of score altogether. </p>
+        <p>*Results will vary. All information provided on this web site is provided “as is” with all faults without warranty of any kind, either expressed or implied. ScoreEase shall not be liable for any indirect, special, consequential, or incidental damages arising out of the use or inability to use this site or from the use of or reliance on the information present.</p>
+        </div>
+        </div>
       )}
     </>
   );
