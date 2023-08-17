@@ -1,5 +1,5 @@
 // Import React
-import React, { useState , useContext } from 'react'
+import React, { useState , useContext, useEffect } from 'react'
 // Import Components
 import PieNeedleChart from '../../components/PieNeedleChart/PieNeedleChart.jsx'
 import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx'
@@ -30,6 +30,20 @@ export default function Dashboard () {
   let loggedIn = user ? false : true
   console.log(userInput)
 
+  useEffect(() => {
+    setUserInput({
+      item_0: 0,  // Date of Birth
+      item_1: 0,  // # of Dependents
+      item_2: 0,  // Total Income
+      item_3: 0,  // Total Debt
+      item_4: 0,  // Total Accounts
+      item_5: 0,  // Revolving Utilization
+      item_6: 0,  // # of Real Estate Loans
+      item_7: 0,  // # of Times 30-59 Days Past Due
+      item_8: 0,  // # of Times 60-89 Days Past Due
+      item_9: 0   // # of Times 90+ Days Past Due
+    })
+  },[user])
   
   return (
     <div className='dashboard-container'>

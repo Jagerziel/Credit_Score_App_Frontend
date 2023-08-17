@@ -20,6 +20,7 @@ export default function DescLoggedIn( { title , description , userInput , setUse
     "0", // # of Times 60-89 Days Past Due
     "0" // # of Times 90+ Days Past Due
   ]
+  
   return (
     <div className='descLoggedIn-container'>
         <div style={{paddingBottom: "5px"}}>{title}</div>
