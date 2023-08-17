@@ -57,7 +57,16 @@ export default function Dashboard () {
         }
       </div>
       <div className='dashboard-description-container-logout' style={{display: user ? "block" : "none"}}>
-        <DescLoggedIn title={userInputCategories[0].title} description={userInputCategories[0].description} userInput={userInput} setUserInput={setUserInput} index={0}/>
+        {
+          userInputCategories.map((data, index) => {
+            return (
+              <div key={index}>
+                <DescLoggedIn title={data.title} description={data.description} userInput={userInput} setUserInput={setUserInput} index={index}/>
+                <div style={{padding: "17px 0 0 0"}}></div>
+              </div>
+            )
+          })
+        }
       </div>
       {loggedIn ? <div className='dashboard-login-button' onClick={() => login()}>Log In</div> : <></>}
     </div>
