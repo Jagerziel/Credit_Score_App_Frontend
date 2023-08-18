@@ -1,4 +1,4 @@
-# Financial Literacy Hackathon 2023
+# 💸 Financial Literacy Hackathon 2023
 
 # Description
 
@@ -61,7 +61,7 @@ Create a more complete, data-driven, real-time credit score software that consid
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
 
-# Technologies Used
+# 💻 Technologies Used
 
 - REACT
 - JS
@@ -70,3 +70,4 @@ Create a more complete, data-driven, real-time credit score software that consid
 - GIT
 - NODE.JS
 - MONGODB
+- FASTAPI
