@@ -7,7 +7,7 @@ import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx'
 import DescLoggedOut from '../../components/Descriptions/DescLoggedOut.jsx'
 import InfoModal from '../../components/InfoModal/InfoModal.jsx'
 // Import Data
-import { userInputCategories , scoringUpperBound , scoreCard , baseScore } from '../../data/data.js'
+import { userInputCategories , scoringUpperBound , scoreCard , baseScore , scoreMapping } from '../../data/data.js'
 import { userInfo } from '../../App.js'
 import { calcScoreDesc } from '../../data/functions.js'
 // Import Firebase
@@ -28,15 +28,43 @@ export default function Dashboard () {
     item_8: 0,  // # of Times 60-89 Days Past Due
     item_9: 0   // # of Times 90+ Days Past Due
   })
-
+  // console.log(userInput)
   const [ score , setScore ] = useState(500)
   
   const user = useContext(userInfo);
   let loggedIn = user ? false : true
 
-  function calcScore( scoreCard , baseScore ) {
+  function calcScore( scoreCard , baseScore , scoreMapping , userInput ) {
+    let finalScore = baseScore
+    let userInputLen = Object.keys(userInput).length
+    console.log(userInput)
 
+    loop_i: for (let i = 0; i < userInputLen; i++) {
+      if (i === 3 || i === 4) {
+        // console.log(`hit ${i}`)
+        continue
+      } else {
+        loop_j: for (let j = 0; j < scoreCard[scoreMapping[`item_${i}`]].length; j += 2) {
+          let inputVal = userInput[`item_${i}`]
+          if (userInput[`item_${i}`] > 1000000000) inputVal = 1000000000 
+          if (isNaN(userInput[`item_${i}`])) inputVal = 0
+          // console.log(userInput[`item_${i}`])
+          if (inputVal <= scoreCard[scoreMapping[`item_${i}`]][j]) {
+            console.log(`${i}) final score${finalScore}`)
+            // console.log(scoreCard[scoreMapping[`item_${i}`]][j])
+            finalScore += scoreCard[scoreMapping[`item_${i}`]][j + 1]
+            break loop_j
+          }
+        }
+      }
+    }
+    console.log(`final score total: ${finalScore}`)
+    return finalScore
   }
+
+  useEffect(() => {
+    setScore(calcScore( scoreCard , baseScore , scoreMapping , userInput ))
+  }, [userInput])
 
 
 
@@ -62,11 +90,11 @@ export default function Dashboard () {
       </div>
       <div className='dashboard-full-chart-container'>
         <div className='dashboard-score-title'>Your Score</div>
-        <div className='dashboard-score-result'>{score + 300}</div>
+        <div className='dashboard-score-result'>{score}</div>
         <div className='dashboard-score-desc'>
           <div style={{padding: "0 5px 0 0"}}>
             {
-              calcScoreDesc(score + 300, scoringUpperBound)
+              calcScoreDesc(score, scoringUpperBound)
             }
           </div>
           <InfoModal score={ score }/>

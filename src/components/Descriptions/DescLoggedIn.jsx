@@ -35,7 +35,7 @@ export default function DescLoggedIn( { title , description , userInput , setUse
                 type="text" 
                 placeholder={placeholderList[index]}
                 value={userInput[index]} 
-                onChange={(e) => setUserInput({...userInput, [`item_${index}`]: e.target.value})}
+                onChange={(e) => setUserInput({...userInput, [`item_${index}`]: parseInt(e.target.value)})}
               />
             </div>
           </div>

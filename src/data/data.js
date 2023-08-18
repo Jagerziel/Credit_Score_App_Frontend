@@ -117,8 +117,8 @@ export const scoreMapping = {
   item_0: "age",  // Age
   item_1: "NumberOfDependents",  // # of Dependents
   item_2: "MonthlyIncome",  // Total Income
-  item_3: 0,  // Total Debt
-  item_4: 0,  // Total Accounts
+  item_3: "DEBT",  // Total Debt
+  item_4: "PASS",  // Total Accounts
   item_5: "RevolvingUtilizationOfUnsecuredLines",  // Revolving Utilization
   item_6: "NumberRealEstateLoansOrLines",  // # of Real Estate Loans
   item_7: "NumberOfTime30-59DaysPastDueNotWorse",  // # of Times 30-59 Days Past Due
