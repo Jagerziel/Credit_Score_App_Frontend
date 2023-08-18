@@ -1,3 +1,7 @@
+# ScoreEase
+
+General Assembly Hackathon Summer August 14th 2023
+
 # 💸 Financial Literacy Hackathon 2023
 
 # Description
@@ -63,11 +67,16 @@ Create a more complete, data-driven, real-time credit score software that consid
 
 # 💻 Technologies Used
 
-- REACT
-- JS
-- HTML
-- CSS
-- GIT
-- NODE.JS
-- MONGODB
-- FASTAPI
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,next,git,github,nodejs,mongodb,figma,netlify,vercel,supabase,vscode&perline=7)](https://skillicons.dev)
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Express
+- Python
+- MongoDB
+- Figma
+- Git/Github
+- Nodejs
+- Vercel
