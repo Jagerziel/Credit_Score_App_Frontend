@@ -91,6 +91,8 @@ export default function Dashboard () {
       }
     }
     // console.log(`final score total: ${finalScore}`)
+    if (finalScore > 850) finalScore = 850
+    if (finalScore < 300) finalScore = 300
     return finalScore
   }
 
