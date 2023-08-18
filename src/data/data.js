@@ -33,16 +33,16 @@ export const userInputCategories = [
     }
   },
   {
-    title: "Total Income",
+    title: "Monthly Income",
     description: {
-      p1: "Total income is often considered in credit scoring models to assess an individual's ability to manage and repay debts. A higher total income can indicate greater financial capacity, influencing a person's creditworthiness by affecting debt repayment capabilities and credit utilization ratios.",
+      p1: "Monthly income is often considered in credit scoring models to assess an individual's ability to manage and repay debts. A higher monthly income can indicate greater financial capacity, influencing a person's creditworthiness by affecting debt repayment capabilities and credit utilization ratios.",
       p2: null
     }
   },
   {
-    title: "Total Debt",
+    title: "Monthly Debt",
     description: {
-      p1: "Total debt is a significant factor in credit scoring as it impacts an individual's credit utilization ratio, which measures the amount of credit being used compared to the total available credit. High total debt relative to available credit can suggest a higher risk of default, potentially leading to a lower credit score.",
+      p1: "Monthly debt is a significant factor in credit scoring as it impacts an individual's credit utilization ratio, which measures the amount of credit being used compared to the monthly available credit. High monthly debt relative to available credit can suggest a higher risk of default, potentially leading to a lower credit score.",
       p2: null
     }
   },
@@ -112,3 +112,16 @@ export const scoreCard = {
 }
 
 export const baseScore = 741
+
+export const scoreMapping = {
+  item_0: "age",  // Age
+  item_1: "NumberOfDependents",  // # of Dependents
+  item_2: "MonthlyIncome",  // Total Income
+  item_3: 0,  // Total Debt
+  item_4: 0,  // Total Accounts
+  item_5: "RevolvingUtilizationOfUnsecuredLines",  // Revolving Utilization
+  item_6: "NumberRealEstateLoansOrLines",  // # of Real Estate Loans
+  item_7: "NumberOfTime30-59DaysPastDueNotWorse",  // # of Times 30-59 Days Past Due
+  item_8: "NumberOfTime60-89DaysPastDueNotWorse",  // # of Times 60-89 Days Past Due
+  item_9: "NumberOfTimes90DaysLate"   // # of Times 90+ Days Past Due
+}

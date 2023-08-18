@@ -17,7 +17,7 @@ import './Dashboard.scss'
 
 export default function Dashboard () {
   const [ userInput , setUserInput ] = useState({
-    item_0: 0,  // Date of Birth
+    item_0: 0,  // Age
     item_1: 0,  // # of Dependents
     item_2: 0,  // Total Income
     item_3: 0,  // Total Debt
@@ -42,7 +42,7 @@ export default function Dashboard () {
 
   useEffect(() => {
     setUserInput({
-      item_0: 0,  // Date of Birth
+      item_0: 0,  // Age
       item_1: 0,  // # of Dependents
       item_2: 0,  // Total Income
       item_3: 0,  // Total Debt
