@@ -15,6 +15,7 @@ import { getInfo, createInfo, updateInfo } from '../../services/dbRequests.js';
 import { login } from '../../services/firebase.js';
 // Import Animation
 import PageTransitionFade from '../../hooks/PageTransition/PageTransitionFade.jsx';
+import CategoryTransitionFade from '../../hooks/PageTransition/CategoryTransitionFade.jsx'
 // Import CSS
 import './Dashboard.scss';
 
@@ -67,7 +68,7 @@ export default function Dashboard () {
         throw new Error('User is null');
       }
     } catch (error) {
-      // console.log('user logged out');
+      console.log('user logged out');
     }
   }, [user]);
 
@@ -115,7 +116,7 @@ export default function Dashboard () {
         throw new Error('User is null');
       }
     } catch (error) {
-      // console.log('user logged out');
+      console.log('user logged out');
     }
     // }
   }, [userInput]);
@@ -149,13 +150,15 @@ export default function Dashboard () {
         >
           {userInputCategories.map((data, index) => {
             return (
-              <div key={index}>
-                <DescLoggedOut
-                  title={data.title}
-                  description={data.description}
-                />
-                <div style={{ padding: '17px 0 0 0' }}></div>
-              </div>
+              <CategoryTransitionFade index={index} delayModifier={index}>
+                <div key={index}>
+                  <DescLoggedOut
+                    title={data.title}
+                    description={data.description}
+                  />
+                  <div style={{ padding: '17px 0 0 0' }}></div>
+                </div>
+              </CategoryTransitionFade>
             );
           })}
         </div>
@@ -165,16 +168,18 @@ export default function Dashboard () {
         >
           {userInputCategories.map((data, index) => {
             return (
-              <div key={index}>
-                <DescLoggedIn
-                  title={data.title}
-                  description={data.description}
-                  userInput={userInput}
-                  setUserInput={setUserInput}
-                  index={index}
-                />
-                <div style={{ padding: '17px 0 0 0' }}></div>
-              </div>
+              <CategoryTransitionFade index={index} delayModifier={index}>
+                <div key={index}>
+                  <DescLoggedIn
+                    title={data.title}
+                    description={data.description}
+                    userInput={userInput}
+                    setUserInput={setUserInput}
+                    index={index}
+                  />
+                  <div style={{ padding: '17px 0 0 0' }}></div>
+                </div>
+              </CategoryTransitionFade>
             );
           })}
         </div>
