@@ -1,6 +1,6 @@
 // import { API_URLS } from '../services/apiConfig.js';
 
-const URL = 'http://localhost:4000/test/';
+const URL = 'http://localhost:4000/info/';
 
 export const getInfo = async (user) => {
   const token = await user.getIdToken();
@@ -32,15 +32,26 @@ export const createInfo = async (user, input) => {
   });
 };
 
-export const updateInfo = async (id, updatedInfo) => {
-  const response = await fetch(URL + id, {
+export const updateInfo = async (user, updatedInfo) => {
+  const token = await user.getIdToken();
+  await fetch(URL, {
     method: 'PUT',
     headers: {
       'Content-type': 'Application/json',
+      Authorization: 'Bearer ' + token,
     },
     body: JSON.stringify(updatedInfo),
   });
-  if (response.ok) {
-    return await response.json();
+};
+
+// dbRequests.js
+export const chkUserInfo = async (uid) => {
+  try {
+    const response = await fetch(`/info/${uid}`);
+    const userObjects = await response.json();
+    return userObjects;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 };

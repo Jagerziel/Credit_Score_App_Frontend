@@ -109,5 +109,4 @@ export const backendMapping = {
   item_7: 'ThirtyFiftyNinePastDue',
   item_8: 'SixtyEightyNinePastDue',
   item_9: 'NinetyDaysLate',
-  score: 'Score',
 };

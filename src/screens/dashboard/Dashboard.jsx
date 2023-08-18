@@ -6,9 +6,13 @@ import DescLoggedIn from '../../components/Descriptions/DescLoggedIn.jsx';
 import DescLoggedOut from '../../components/Descriptions/DescLoggedOut.jsx';
 import InfoModal from '../../components/InfoModal/InfoModal.jsx';
 // Import Data
-import { userInputCategories, scoringUpperBound } from '../../data/data.js';
+import {
+  userInputCategories,
+  scoringUpperBound,
+  backendMapping,
+} from '../../data/data.js';
 import { userInfo } from '../../App.js';
-import { getInfo, createInfo } from '../../services/dbRequests.js';
+import { getInfo, createInfo, updateInfo } from '../../services/dbRequests.js';
 // Import Firebase
 import { login } from '../../services/firebase.js';
 // Import CSS
@@ -56,11 +60,12 @@ export default function Dashboard() {
       item_8: 0, // # of Times 60-89 Days Past Due
       item_9: 0, // # of Times 90+ Days Past Due
     });
-    console.log(user);
+    // console.log(user);
+    // console.log(userInput);
     try {
       if (user !== null) {
         let data = getInfo(user);
-        console.log(data);
+        // console.log(data);
       } else {
         throw new Error('User is null');
       }
@@ -68,6 +73,55 @@ export default function Dashboard() {
       console.log('user logged out');
     }
   }, [user]);
+
+  useEffect(() => {
+    // const userInputValues = Object.values(userInput);
+    // let proceed = true;
+    // for (let i = 0; i < userInputValues.length; i++) {
+    //   if (userInputValues[i] !== null) {
+    //     proceed = false;
+    //     break;
+    //   }
+    // }
+    // if (proceed) {
+    try {
+      if (user !== null) {
+        let dataReformatted = {};
+        let backendMappingKeys = Object.values(backendMapping);
+
+        for (let i = 0; i < backendMappingKeys.length; i++) {
+          dataReformatted = {
+            ...dataReformatted,
+            [backendMappingKeys[i]]: userInput[`item_${i}`],
+          };
+        }
+
+        dataReformatted = { ...dataReformatted, Score: score, uid: user.uid };
+
+        // Check if user data already exists
+        // Fetch user info check
+        fetch(`http://localhost:4000/info/${user.uid}`)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.exists) {
+              updateInfo(user, dataReformatted);
+              // User data exists, handle accordingly
+            } else {
+              // User data doesn't exist, handle accordingly
+              createInfo(user, dataReformatted);
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } else {
+        throw new Error('User is null');
+      }
+    } catch (error) {
+      console.log('user logged out');
+    }
+    // }
+  }, [userInput]);
 
   return (
     <div className="dashboard-container">
