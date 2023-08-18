@@ -119,7 +119,7 @@ export default function Dashboard () {
       console.log('user logged out');
     }
     // }
-  }, [userInput]);
+  }, [score]);
   
   return (
     <PageTransitionFade>
