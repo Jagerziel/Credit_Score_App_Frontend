@@ -1,0 +1,20 @@
+button {
+  width: 386px;
+  height: 34px
+}
+.center-container {
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+      /* Set container height to viewport height */
+}
+.text{
+  font:20px;
+}
+#text{
+  font-size: 15px;
+}
+.checkmark-text{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
