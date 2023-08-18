@@ -9,12 +9,12 @@ export default function DescLoggedIn( { title , description , userInput , setUse
   const [ openMenu , setOpenMenu ] = useState(false)
 
   const placeholderList = [
-    "MM-DD-YYYY", // Date of Birth
+    "25", // Date of Birth
     "5", // # of Dependents
     "50,000", // Total Income
     "35,000", // Total Debt
     "2", // Total Accoutns
-    "2", // Revolving Utilization
+    "0.5", // Revolving Utilization
     "1", // # of Real Estate Loans
     "1", // # of Times 30-59 Days Past Due
     "0", // # of Times 60-89 Days Past Due
@@ -35,7 +35,7 @@ export default function DescLoggedIn( { title , description , userInput , setUse
                 type="text" 
                 placeholder={placeholderList[index]}
                 value={userInput[index]} 
-                onChange={(e) => setUserInput({...userInput, [`item_${index}`]: e.target.value})}
+                onChange={(e) => setUserInput({...userInput, [`item_${index}`]: parseInt(e.target.value)})}
               />
             </div>
           </div>

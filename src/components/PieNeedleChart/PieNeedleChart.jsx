@@ -65,7 +65,7 @@ export default function PieNeedleChart ( { score } ) {
                     <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
-              {needle(score, data, cx, cy, iR, oR, '#004B82')}
+              {needle(score - 300, data, cx, cy, iR, oR, '#004B82')}
           </PieChart>
       </div>
   );
