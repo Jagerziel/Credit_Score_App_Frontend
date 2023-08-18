@@ -16,14 +16,15 @@ TBC
 
 ### Dependencies
 
-- axios
-- firebase
-- framer-motion
-- react
-- react-dom
-- react-router-dom
-- recharts
-- sass
+ - axios
+ - firebase
+ - framer-motion
+ - react
+ - react-dom
+ - react-router-dom
+ - recharts
+ - sass
+
 
 ### API Endpoints
 

@@ -77,6 +77,8 @@ export default function Home() {
 
   let userName = user ? user.reloadUserInfo.displayName : '';
 
+  console.log(tests);
+
   return (
     <>
       {user ? (
