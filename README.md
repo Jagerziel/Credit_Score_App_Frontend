@@ -1,18 +1,20 @@
+# Financial Literacy Hackathon 2023
+
 # Description
 
-TBC
+Embark on a seamless credit journey with our innovative web application. ScoreEase introduces a user-friendly interface that seamlessly combines the power of real-time data analysis with the entirety of your financial history. Say farewell to complex credit assessments and embrace a new era of simplicity and accuracy, as ScoreEase effortlessly allows borrowers to view credit and loans by tapping into their complete financial narrative, all at your fingertips.
+
+# Prompt
+
+Create a more complete, data-driven, real-time credit score software that considers a borrower's finanacial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include: consider bill payments, rent, utilities, subscriptions, and visualization of data.
 
 ## Application Screenshots
 
-Coming Soon...
+![image](./src/images/Screenshot%202023-08-18%20at%208.43.25%20AM.png)
 
-## Technical Notes
+![image2](./src/images/Screenshot%202023-08-18%20at%208.44.35%20AM.png)
 
-TBC
-
-### Data
-
-TBC
+![image3](./src/images/Screenshot%202023-08-18%20at%208.45.43%20AM.png)
 
 ### Dependencies
 
@@ -25,13 +27,9 @@ TBC
 - recharts
 - sass
 
-### API Endpoints
-
-TBC
-
 ## Future Features
 
-TBC
+- Info modals for explanations on credit scores
 
 ## Team
 
@@ -62,3 +60,13 @@ TBC
 
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
+
+# Technologies Used
+
+- REACT
+- JS
+- HTML
+- CSS
+- GIT
+- NODE.JS
+- MONGODB

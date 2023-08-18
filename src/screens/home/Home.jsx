@@ -19,7 +19,9 @@ export default function Home() {
   return (
     <>
       
-        <div style={{ textAlign:'center',minHeight:'calc(100vh - 60px)', backgroundColor:'var(--background-color)'}} ><p className='text' style={{margin:'15px'}}>Financial decisions aren't static, and your credit score shouldn't be either!</p>
+        <div style={{ textAlign:'center',minHeight:'calc(100vh - 60px)', backgroundColor:'var(--background-color)'}}>
+          <br></br>
+          <p className='text' style={{margin:'15px'}}>Financial decisions aren't static, and your credit score shouldn't be either!</p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <img src={image2}></img>
         </div>
