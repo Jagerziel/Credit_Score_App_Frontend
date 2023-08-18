@@ -121,6 +121,7 @@ export const scoreCard = {
   ],
   NumberOfDependents: [0, 11.0, 2.0, 2.0, 20.0, -7.0, 1000000000, -66.0],
 };
+//
 
 export const baseScore = 741;
 
