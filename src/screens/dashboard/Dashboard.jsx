@@ -13,6 +13,9 @@ import { calcScoreDesc , calcScore } from '../../data/functions.js'
 import { getInfo, createInfo, updateInfo } from '../../services/dbRequests.js';
 // Import Firebase
 import { login } from '../../services/firebase.js';
+// Import Animation
+import PageTransitionFade from '../../hooks/PageTransition/PageTransitionFade.jsx';
+import CategoryTransitionFade from '../../hooks/PageTransition/CategoryTransitionFade.jsx'
 // Import CSS
 import './Dashboard.scss';
 
@@ -116,72 +119,78 @@ export default function Dashboard () {
       console.log('user logged out');
     }
     // }
-  }, [userInput]);
+  }, [score]);
   
   return (
-    <div className="dashboard-container">
-      <div className='dashboard-return-home-container'>
-        <NavLink className='dashboard-return-home' to={"/"}>Back</NavLink>
-      </div>
-      <div className="dashboard-full-chart-container">
-        <div className="dashboard-score-title">Your Score</div>
-        <div className="dashboard-score-result">{score}</div>
-        <div className="dashboard-score-desc">
-          <div style={{ padding: '0 5px 0 0' }}>
-            {calcScoreDesc(score, scoringUpperBound)}
+    <PageTransitionFade>
+      <div className="dashboard-container">
+        <div className='dashboard-return-home-container'>
+          <NavLink className='dashboard-return-home' to={"/"}>Back</NavLink>
+        </div>
+        <div className="dashboard-full-chart-container">
+          <div className="dashboard-score-title">Your Score</div>
+          <div className="dashboard-score-result">{score}</div>
+          <div className="dashboard-score-desc">
+            <div style={{ padding: '0 5px 0 0' }}>
+              {calcScoreDesc(score, scoringUpperBound)}
+            </div>
+            <InfoModal score={score} />
           </div>
-          <InfoModal score={score} />
+          <div className="dashboard-pie-needle-chart-container">
+            <PieNeedleChart score={score} />
+          </div>
+          <div className="dashboard-bounds-container">
+            <div>300</div>
+            <div>850</div>
+          </div>
         </div>
-        <div className="dashboard-pie-needle-chart-container">
-          <PieNeedleChart score={score} />
+        <div
+          className="dashboard-description-container-logout"
+          style={{ display: user ? 'none' : 'block' }}
+        >
+          {userInputCategories.map((data, index) => {
+            return (
+              <CategoryTransitionFade index={index} delayModifier={index}>
+                <div key={index}>
+                  <DescLoggedOut
+                    title={data.title}
+                    description={data.description}
+                  />
+                  <div style={{ padding: '17px 0 0 0' }}></div>
+                </div>
+              </CategoryTransitionFade>
+            );
+          })}
         </div>
-        <div className="dashboard-bounds-container">
-          <div>300</div>
-          <div>850</div>
+        <div
+          className="dashboard-description-container-logout"
+          style={{ display: user ? 'block' : 'none' }}
+        >
+          {userInputCategories.map((data, index) => {
+            return (
+              <CategoryTransitionFade index={index} delayModifier={index}>
+                <div key={index}>
+                  <DescLoggedIn
+                    title={data.title}
+                    description={data.description}
+                    userInput={userInput}
+                    setUserInput={setUserInput}
+                    index={index}
+                  />
+                  <div style={{ padding: '17px 0 0 0' }}></div>
+                </div>
+              </CategoryTransitionFade>
+            );
+          })}
         </div>
+        {loggedIn ? (
+          <div className="dashboard-login-button" onClick={() => login()}>
+            Log In
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-      <div
-        className="dashboard-description-container-logout"
-        style={{ display: user ? 'none' : 'block' }}
-      >
-        {userInputCategories.map((data, index) => {
-          return (
-            <div key={index}>
-              <DescLoggedOut
-                title={data.title}
-                description={data.description}
-              />
-              <div style={{ padding: '17px 0 0 0' }}></div>
-            </div>
-          );
-        })}
-      </div>
-      <div
-        className="dashboard-description-container-logout"
-        style={{ display: user ? 'block' : 'none' }}
-      >
-        {userInputCategories.map((data, index) => {
-          return (
-            <div key={index}>
-              <DescLoggedIn
-                title={data.title}
-                description={data.description}
-                userInput={userInput}
-                setUserInput={setUserInput}
-                index={index}
-              />
-              <div style={{ padding: '17px 0 0 0' }}></div>
-            </div>
-          );
-        })}
-      </div>
-      {loggedIn ? (
-        <div className="dashboard-login-button" onClick={() => login()}>
-          Log In
-        </div>
-      ) : (
-        <></>
-      )}
-    </div>
+    </PageTransitionFade>
   );
 }
