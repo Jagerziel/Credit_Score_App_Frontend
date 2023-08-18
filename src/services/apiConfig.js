@@ -1,30 +1,7 @@
-//Import axios
-import axios from "axios";
-import dotenv from 'dotenv'
+const MAIN_URL = process.env.REACT_APP_SERVER;
 
-dotenv.config();
-
-const {
-  BACKEND_LOCAL_PORT
-} = process.env;
-
-// Set API Variable
-let apiUrl;
-// Set URL link
-const apiUrls = {
-  // Need to change later on real link
-  production: `https://http://localhost:${BACKEND_LOCAL_PORT}/`,
-  development: `https://http://localhost:${BACKEND_LOCAL_PORT}/`,
+export const API_URLS = {
+  MAIN_URL,
+  TEST: MAIN_URL + 'test/',
+  INFO: MAIN_URL + 'info/',
 };
-// Determine if production or deployment
-if (window.location.hostname === "localhost") {
-  apiUrl = apiUrls.development;
-} else {
-  apiUrl = apiUrls.production;
-}
-// Use Axios
-const api = axios.create({
-  baseURL: apiUrl,
-});
-// Export API
-export default api;
