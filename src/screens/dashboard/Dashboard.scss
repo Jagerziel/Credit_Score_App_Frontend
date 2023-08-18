@@ -1,0 +1,103 @@
+.dashboard-container {
+    // border: 2px solid red;
+    min-height: calc(100vh - 100px - 70px);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 15px 0px;
+}
+
+.dashboard-return-home-container {
+    // border: 2px solid red;
+    width: calc(100% - 44px);
+    padding: 15px 22px 15px 22px;
+}
+
+.dashboard-return-home {
+    // border: 2px solid red;
+    color: #000; 
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.dashboard-return-home:hover {
+    cursor: pointer;
+    color: var(--color-primary)
+}
+
+.dashboard-full-chart-container {
+    // border: 2px solid red;
+    display: flex;
+    width: 390px;
+    height: 286px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: #F5F5F5; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 11px;
+}
+
+.dashboard-pie-needle-chart-container {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-score-desc {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 21px;
+}
+
+
+
+.dashboard-bounds-container {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 310px;
+    margin:auto;
+    box-sizing: border-box;
+    padding: 0px 25px 15px 25px;
+}
+
+.dashboard-score-title {
+    // border: 2px solid red;
+    font-size: 16px;
+    color: black;
+}
+
+.dashboard-score-result {
+    font-size: 32px;
+    color: black;
+}
+
+.dashboard-description-container-logout {
+    // border: 2px solid red;
+    width: 100%;
+    padding: 39px 0px 22px 0px;
+}
+
+.dashboard-login-button {
+    border-radius: 6px;
+    border: 1px solid var(--color-primary);
+    background: var(--color-primary); 
+    color: var(--color-secondary);
+    width: 388px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+}
+
+.dashboard-login-button:hover {
+    cursor: pointer;
+    background: var(--color-secondary); 
+    color: var(--color-primary);
+}
