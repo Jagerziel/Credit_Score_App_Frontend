@@ -22,14 +22,15 @@ Create a more complete, data-driven, real-time credit score software that consid
 
 ### Dependencies
 
-- axios
-- firebase
-- framer-motion
-- react
-- react-dom
-- react-router-dom
-- recharts
-- sass
+ - axios
+ - firebase
+ - framer-motion
+ - react
+ - react-dom
+ - react-router-dom
+ - recharts
+ - sass
+
 
 ## Future Features
 
