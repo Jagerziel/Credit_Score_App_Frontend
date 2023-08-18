@@ -1,16 +1,21 @@
 # Description
+
 TBC
 
 ## Application Screenshots
+
 Coming Soon...
 
 ## Technical Notes
+
 TBC
 
 ### Data
+
 TBC
 
 ### Dependencies
+
  - axios
  - firebase
  - framer-motion
@@ -20,17 +25,19 @@ TBC
  - recharts
  - sass
 
+
 ### API Endpoints
+
 TBC
 
 ## Future Features
+
 TBC
 
 ## Team
 
-
 **Alaysia Veal (Software Engineer)**
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+[LinkedIn](https://www.linkedin.com/in/alaysia-veal/)
 [GitHub](https://github.com/AlaysiaVeal)
 
 **Kimberly Mannette (UX/UI Designer)**
@@ -38,7 +45,9 @@ TBC
 [GitHub](https://github.com/kimberlymannette)
 
 **Kate Crawford (Data Science Engineer)**
+
 <!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+
 [GitHub](https://github.com/codewithkate)
 
 **Mark Harris (Data Science Engineer)**
@@ -54,6 +63,3 @@ TBC
 
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
-
-
- 

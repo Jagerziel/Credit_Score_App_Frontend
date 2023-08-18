@@ -110,3 +110,4 @@ export const backendMapping = {
   item_8: 'SixtyEightyNinePastDue',
   item_9: 'NinetyDaysLate',
 };
+

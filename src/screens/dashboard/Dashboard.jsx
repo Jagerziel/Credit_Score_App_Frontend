@@ -34,6 +34,8 @@ export default function Dashboard() {
 
   const [score, setScore] = useState(500);
 
+  const [ score , setScore ] = useState(500)
+
   const user = useContext(userInfo);
   let loggedIn = user ? false : true;
   // console.log(userInput);
@@ -46,6 +48,15 @@ export default function Dashboard() {
     }
   }
   // console.log(score);
+
+  function calcScore(score , scoringUpperBound ) {
+    for (let i = 0; i < scoringUpperBound.length; i++ ) {
+      if (score < scoringUpperBound[i][0]) {
+        return scoringUpperBound[i][1]
+      }
+    }
+  }
+  console.log(score)
 
   useEffect(() => {
     setUserInput({
