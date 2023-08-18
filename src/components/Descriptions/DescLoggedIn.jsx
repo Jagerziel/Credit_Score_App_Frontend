@@ -14,7 +14,7 @@ export default function DescLoggedIn( { title , description , userInput , setUse
     "50,000", // Total Income
     "35,000", // Total Debt
     "2", // Total Accoutns
-    "2", // Revolving Utilization
+    "0.5", // Revolving Utilization
     "1", // # of Real Estate Loans
     "1", // # of Times 30-59 Days Past Due
     "0", // # of Times 60-89 Days Past Due
