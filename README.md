@@ -39,7 +39,7 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 ![LoggedIn](./src/images/LoginDashboardScreenshot.png)
 
 
-## Approach
+## How ScoreEase was Built
 
 ### Design
 
@@ -81,17 +81,28 @@ The algorithm edge cases:
  - Upper and Lower Bounds:  The maximum value in the scorecard is 1,000,000,000 therefore when the algorithm takes in a value that exceeds this maximum, it will set it to 1,000,000,000.  It will also set any NaN values to 0 (when a user deletes their input, the empty string will result in `NaN`)
  - Adjust the Score: As the score can only land between 300 and 850 a lower and upper bound were set, respectively, to ensure a result within this range.
 
-## Full Stack Data Flow with Firebase
+### Full Stack Data Flow with Firebase
 
 The below diagram illustrates the communciation flow between the Front-End, Back-End, and Firebase.
 
 ![FirebaseFlow](./src/images/FirebaseFlow.png)
 
+### Data Science Modelling Approach
 
+The model calculates a score that predicts the probability of a borrower repaying a loan on time.  It uses Weight of Evidence (WoE) which explains howcertain factors, such as age or spending, affects credit history.  The aim is to provide more transparent scoring metrics.
 
-## Front-End Dependencies
+![DataModelApproach](./src/images/DataModelApproach.png)
 
- - axios
+### The Result
+
+Our team collaborated across many fronts to construct a full stack MERN applciation with user authentication leveraging data modeling, intuitive UX design, and seemless usability.  
+
+`***This application was awarded first place in General Assembly's Summer Hackathon!***`
+
+## Technologies Used
+
+### Front-End Dependencies
+
  - firebase
  - framer-motion
  - react
@@ -101,11 +112,7 @@ The below diagram illustrates the communciation flow between the Front-End, Back
  - sass
 
 
-
-
-
-
-## 💻 Full Stack Technologies Used
+### 💻 Full Stack Technologies Used
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,next,git,github,nodejs,mongodb,figma,netlify,vercel,supabase,vscode&perline=7)](https://skillicons.dev)
 
@@ -124,6 +131,9 @@ The below diagram illustrates the communciation flow between the Front-End, Back
 ## Future Features
 
 - Info modals for explanations on credit scores
+- More efficient API call methods 
+- Enhancement of Data Model
+- Packaging for integration into other business products
 
 ## Team
 
