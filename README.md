@@ -13,21 +13,31 @@ Create a more complete, data-driven, real-time credit score software that consid
 
 Embark on a seamless credit journey with our innovative web application. ScoreEase introduces a user-friendly interface that seamlessly combines the power of real-time data analysis with the entirety of your financial history. Say farewell to complex credit assessments and embrace a new era of simplicity and accuracy, as ScoreEase effortlessly allows borrowers to view credit and loans by tapping into their complete financial narrative, all at your fingertips.
 
-Github Repository Links:
-- Frontend Repo: 
-- Backend Repo:
-- Data Modeling Repo:
-
-
+## Github Repository Links
+- Frontend Repo: https://github.com/Jagerziel/Credit_Score_App_Frontend
+- Backend Repo: https://github.com/krsnamara/Credit_Score_App_Backend
+- Data Modeling Repo: https://github.com/codewithkate/Credit_Score_App_Model
 
 
 ## Application Screenshots
+**Home Screen**
 
-![image](./src/images/Screenshot%202023-08-18%20at%208.43.25%20AM.png)
+*The landing screen when the application first loads.  The user has the option of logging in or navigating to the dashboard screen to further explore the application*  
 
-![image2](./src/images/Screenshot%202023-08-18%20at%208.44.35%20AM.png)
+![LoggedOut](./src/images/LogoutHomeScreenshot.png)
 
-![image3](./src/images/Screenshot%202023-08-18%20at%208.45.43%20AM.png)
+**Dashboard Screen (Logged Out)**: 
+
+*The user has the option of logging in or reviewing the different categories they would need to fill to obtain an estimated credit score*
+
+![LoggedOut](./src/images/LogoutDashboardScreenshot.png)
+
+**Dashboard Screen (Logged In)**
+
+*Once the user logs in, they are greeted at the top of the application and the input fields appear allowing them to input the relevant information to determine their scores.*
+
+![LoggedIn](./src/images/LoginDashboardScreenshot.png)
+
 
 ## Approach
 
@@ -35,7 +45,12 @@ Github Repository Links:
 
 
 
-### Dependencies
+
+
+
+
+
+### Front-End Dependencies
 
  - axios
  - firebase
@@ -47,12 +62,11 @@ Github Repository Links:
  - sass
 
 
-## Future Features
-
-- Info modals for explanations on credit scores
 
 
-# 💻 Technologies Used
+
+
+# 💻 Full Stack Technologies Used
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,next,git,github,nodejs,mongodb,figma,netlify,vercel,supabase,vscode&perline=7)](https://skillicons.dev)
 
@@ -68,6 +82,10 @@ Github Repository Links:
 - Nodejs
 - Vercel
 
+## Future Features
+
+- Info modals for explanations on credit scores
+
 ## Team
 
 **Alaysia Veal (Software Engineer)**
@@ -79,9 +97,7 @@ Github Repository Links:
 [GitHub](https://github.com/kimberlymannette)
 
 **Kate Crawford (Data Science Engineer)**
-
-<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
-
+[LinkedIn](https://www.linkedin.com/in/kaitlencrawford/) |
 [GitHub](https://github.com/codewithkate)
 
 **Mark Harris (Data Science Engineer)**
@@ -89,11 +105,9 @@ Github Repository Links:
 [GitHub](https://github.com/MarkCHarris)
 
 **Martin Fitzpatrick (Software Engineer)**
-
 [LinkedIn](https://www.linkedin.com/in/martinj-fitzpatrick/) |
 [GitHub](https://github.com/krsnamara)
 
-**Ryan Ehrlich (Software Engineer)**
-
+**Ryan Ehrlich (Software Engineer)** 
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
