@@ -24,7 +24,7 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 
 *The landing screen when the application first loads.  The user has the option of logging in or navigating to the dashboard screen to further explore the application*  
 
-![LoggedOut](./src/images/LogoutHomeScreenshot.png)
+![Home](./src/images/LogoutHomeScreenshot.png)
 
 **Dashboard Screen (Logged Out)**: 
 
@@ -41,16 +41,55 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 
 ## Approach
 
+### Design
+
+The initial question we had to answer is how we wanted to approach this application.  Our team is comprised of `1 UX/UI Designedr`, `3 Software Engineers`, and `2 Data Scientists`.  After a day of planning, our approach became the following:
+
+ - Data Science Team: Plan and research the best approach to determining how the score would be calculated.  
+ - Software Engineering Team:  Set up the base shell code for the Front-End and Back-End, testing all routes, setting up base react components, discussing all dependencies, and aligning on naming conventions
+ - UX/UI Team: Research similar applications currently available on the market and begin wireframing
+
+We also agreed, given the 3-day timeframe, to limit the design to an iPhone 14-max with plans to provide more responsive design in the future.  Given the limited time, the Software Engineering team determined it would be best to ensure full CRUD, user authentication, and dynamic rendering was prioritized first.
+
+### Colloaboration
+
+A critical piece to our team success was the team collaboration.  All teams discussed the appropriate input and output fields.  This ensured that the interface designed by UX/UI would take the necessary inputs required by the Software Engineering and Team Data Science teams.  The method of calculation was much discussed as well and ultimately determined that the Data Science Team would provide a `Scorecard` to be implemented for dynamic rendering on the web application.  
+
+### The Scorecard
+
+The Scorecard was developed using a point system.  The base score is `741` and each entry by a user will add or subtract points from the base score to determine a user's ultimate credit score.
+
+The Scorecard is formatted as an object where the key contains an array.  The `even indexes` within the array are the maximum thresholds.  The `odd indexes` are the score modifiers.  
+
+The Scorecard:
+```
+export const scoreCard = {
+  'basepoints': [0, 741.0],
+  'RevolvingUtilizationOfUnsecuredLines': [0.5, 38.0, 1.0, -38.0, 1.5, -90.0, 1000000000, -65.0],
+  'age': [18.0, -69.0, 26.0, -15.0, 35.0, -15.0, 45.0, -9.0, 65.0, 2.0, 1000000000, 28.0],
+  'NumberOfTime30-59DaysPastDueNotWorse': [1.0, 16.0, 2.0, -27.0, 1000000000, -57.0],
+  'DebtRatio': [0.3125, 7.0, 0.625, -3.0, 2.5, -29.0, 1000000000, 10.0],
+  'MonthlyIncome': [0, 2.0, 5000.0, -3.0, 10000.0, 1.0, 1000000000, 5.0],
+  'NumberOfTimes90DaysLate': [1.0, 12.0, 1.5, -59.0, 5.0, -84.0, 10.0, -100.0, 1000000000, -85.0],
+  'NumberRealEstateLoansOrLines': [0.5, -10.0, 3.0, 10.0, 1000000000, -11.0],
+  'NumberOfTime60-89DaysPastDueNotWorse': [1.0, 9.0, 2.0, -54.0, 1000000000, -82.0],
+  'NumberOfDependents': [0, 11.0, 2.0, 2.0, 20.0, -7.0, 1000000000, -66.0]
+}
+```
+
+The algorithm edge cases:
+ - Upper and Lower Bounds:  The maximum value in the scorecard is 1,000,000,000 therefore when the algorithm takes in a value that exceeds this maximum, it will set it to 1,000,000,000.  It will also set any NaN values to 0 (when a user deletes their input, the empty string will result in `NaN`)
+ - Adjust the Score: As the score can only land between 300 and 850 a lower and upper bound were set, respectively, to ensure a result within this range.
+
+## Full Stack Data Flow with Firebase
+
+The below diagram illustrates the communciation flow between the Front-End, Back-End, and Firebase.
+
+![FirebaseFlow](./src/images/FirebaseFlow.png)
 
 
 
-
-
-
-
-
-
-### Front-End Dependencies
+## Front-End Dependencies
 
  - axios
  - firebase
@@ -66,7 +105,7 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 
 
 
-# 💻 Full Stack Technologies Used
+## 💻 Full Stack Technologies Used
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,next,git,github,nodejs,mongodb,figma,netlify,vercel,supabase,vscode&perline=7)](https://skillicons.dev)
 
