@@ -1,16 +1,25 @@
-# ScoreEase
-
-General Assembly Hackathon Summer August 14th 2023
-
 # 💸 Financial Literacy Hackathon 2023
+*General Assembly Hackathon Summer August 14th 2023*
 
-# Description
+***Result: 1st Place***
+
+
+## Hackathon Prompt
+
+Create a more complete, data-driven, real-time credit score software that considers a borrower's finanacial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include: consider bill payments, rent, utilities, subscriptions, and visualization of data.
+
+
+## Description
 
 Embark on a seamless credit journey with our innovative web application. ScoreEase introduces a user-friendly interface that seamlessly combines the power of real-time data analysis with the entirety of your financial history. Say farewell to complex credit assessments and embrace a new era of simplicity and accuracy, as ScoreEase effortlessly allows borrowers to view credit and loans by tapping into their complete financial narrative, all at your fingertips.
 
-# Prompt
+Github Repository Links:
+- Frontend Repo: 
+- Backend Repo:
+- Data Modeling Repo:
 
-Create a more complete, data-driven, real-time credit score software that considers a borrower's finanacial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include: consider bill payments, rent, utilities, subscriptions, and visualization of data.
+
+
 
 ## Application Screenshots
 
@@ -19,6 +28,12 @@ Create a more complete, data-driven, real-time credit score software that consid
 ![image2](./src/images/Screenshot%202023-08-18%20at%208.44.35%20AM.png)
 
 ![image3](./src/images/Screenshot%202023-08-18%20at%208.45.43%20AM.png)
+
+## Approach
+
+
+
+
 
 ### Dependencies
 
@@ -35,6 +50,23 @@ Create a more complete, data-driven, real-time credit score software that consid
 ## Future Features
 
 - Info modals for explanations on credit scores
+
+
+# 💻 Technologies Used
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,next,git,github,nodejs,mongodb,figma,netlify,vercel,supabase,vscode&perline=7)](https://skillicons.dev)
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Express
+- Python
+- MongoDB
+- Figma
+- Git/Github
+- Nodejs
+- Vercel
 
 ## Team
 
@@ -65,19 +97,3 @@ Create a more complete, data-driven, real-time credit score software that consid
 
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
-
-# 💻 Technologies Used
-
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,next,git,github,nodejs,mongodb,figma,netlify,vercel,supabase,vscode&perline=7)](https://skillicons.dev)
-
-- HTML5
-- CSS3
-- JavaScript
-- React
-- Express
-- Python
-- MongoDB
-- Figma
-- Git/Github
-- Nodejs
-- Vercel
