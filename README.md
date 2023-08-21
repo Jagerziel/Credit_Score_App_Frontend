@@ -138,7 +138,7 @@ Our team collaborated across many fronts to construct a full stack MERN applciat
 ## Team
 
 **Alaysia Veal (Software Engineer)**
-[LinkedIn](https://www.linkedin.com/in/alaysia-veal/)
+[LinkedIn](https://www.linkedin.com/in/alaysia-veal/) |
 [GitHub](https://github.com/AlaysiaVeal)
 
 **Kimberly Mannette (UX/UI Designer)**
