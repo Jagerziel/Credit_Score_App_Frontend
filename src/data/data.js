@@ -117,9 +117,6 @@ export const scoreDetails = {
   }
 }
 
-
-
-
 export const scoringUpperBound = [
   [579, "Poor"],
   [669, "Fair"],
