@@ -19,7 +19,6 @@ export function calcScore( scoreCard , baseScore , scoreMapping , userInput ) {
           if (isNaN(userInput[`item_2`])) inputVal = 0
           // Loop through array by 2 to determine if less than stated threshold and add applicable score
           if (inputVal <= scoreCard[scoreMapping[`item_2`]][j]) {
-            // console.log(`2) final score${finalScore}`)
             finalScore += scoreCard[scoreMapping[`item_2`]][j + 1]
             break loop_j
           }
@@ -37,7 +36,6 @@ export function calcScore( scoreCard , baseScore , scoreMapping , userInput ) {
         loop_j: for (let j = 0; j < scoreCard[`DebtRatio`].length; j += 2) {
           // Loop through array by 2 to determine if less than stated threshold and add applicable score
           if (debtRatio <= scoreCard[`DebtRatio`][j]) {
-            // console.log(`${i}) final score${finalScore}`)
             finalScore += scoreCard[`DebtRatio`][j + 1]
             break loop_j
           }
@@ -52,14 +50,12 @@ export function calcScore( scoreCard , baseScore , scoreMapping , userInput ) {
           if (isNaN(userInput[`item_${i}`])) inputVal = 0
           // Loop through array by 2 to determine if less than stated threshold and add applicable score
           if (inputVal <= scoreCard[scoreMapping[`item_${i}`]][j]) {
-            // console.log(`${i}) final score${finalScore}`)
             finalScore += scoreCard[scoreMapping[`item_${i}`]][j + 1]
             break loop_j
           }
         }
       }
     }
-    // console.log(`final score total: ${finalScore}`)
     if (finalScore > 850) finalScore = 850
     if (finalScore < 300) finalScore = 300
     return finalScore

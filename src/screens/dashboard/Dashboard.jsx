@@ -43,8 +43,6 @@ export default function Dashboard () {
     setScore(calcScore( scoreCard , baseScore , scoreMapping , userInput ))
   }, [userInput])
 
-
-
   useEffect(() => {
     setUserInput({
       item_0: 0,  // Age
@@ -73,15 +71,6 @@ export default function Dashboard () {
   }, [user]);
 
   useEffect(() => {
-    // const userInputValues = Object.values(userInput);
-    // let proceed = true;
-    // for (let i = 0; i < userInputValues.length; i++) {
-    //   if (userInputValues[i] !== null) {
-    //     proceed = false;
-    //     break;
-    //   }
-    // }
-    // if (proceed) {
     try {
       if (user !== null) {
         let dataReformatted = {};
@@ -134,7 +123,7 @@ export default function Dashboard () {
             <div style={{ padding: '0 5px 0 0' }}>
               {calcScoreDesc(score, scoringUpperBound)}
             </div>
-            <InfoModal score={score} />
+            <InfoModal score={score} loggedIn={loggedIn}/>
           </div>
           <div className="dashboard-pie-needle-chart-container">
             <PieNeedleChart score={score} />

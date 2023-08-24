@@ -8,7 +8,6 @@
 
 Create a more complete, data-driven, real-time credit score software that considers a borrower's finanacial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include: consider bill payments, rent, utilities, subscriptions, and visualization of data.
 
-
 ## Description
 
 Embark on a seamless credit journey with our innovative web application. ScoreEase introduces a user-friendly interface that seamlessly combines the power of real-time data analysis with the entirety of your financial history. Say farewell to complex credit assessments and embrace a new era of simplicity and accuracy, as ScoreEase effortlessly allows borrowers to view credit and loans by tapping into their complete financial narrative, all at your fingertips.
@@ -17,7 +16,6 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 - Frontend Repo: https://github.com/Jagerziel/Credit_Score_App_Frontend
 - Backend Repo: https://github.com/krsnamara/Credit_Score_App_Backend
 - Data Modeling Repo: https://github.com/codewithkate/Credit_Score_App_Model
-
 
 ## Application Screenshots
 **Home Screen**
@@ -38,6 +36,11 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 
 ![LoggedIn](./src/images/LoginDashboardScreenshot.png)
 
+**Information Modal**
+
+*The information modal provides additional information pertinent to the user's score.  This allows a user to gain a better understanding with just one click of the question mark icon*
+
+![Modal](./src/images/LoginDashboardModal.png)
 
 ## How ScoreEase was Built
 
@@ -130,15 +133,17 @@ Our team collaborated across many fronts to construct a full stack MERN applciat
 
 ## Future Features
 
-- Info modals for explanations on credit scores
 - More efficient API call methods 
 - Enhancement of Data Model
 - Packaging for integration into other business products
 
+## Features Added Post-Hackathon
+ - Information Modal included with explainations of credit score
+
 ## Team
 
 **Alaysia Veal (Software Engineer)**
-[LinkedIn](https://www.linkedin.com/in/alaysia-veal/)
+[LinkedIn](https://www.linkedin.com/in/alaysia-veal/) |
 [GitHub](https://github.com/AlaysiaVeal)
 
 **Kimberly Mannette (UX/UI Designer)**

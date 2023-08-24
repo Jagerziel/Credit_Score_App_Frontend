@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 // Import Components
 import Home from './screens/home/Home.jsx';
-import HomeTest from './screens/HomeTest/HomeTest.jsx';
 import Profile from './screens/profile/Profile.jsx';
 import Dashboard from './screens/dashboard/Dashboard.jsx';
 import { Navigation } from './components/Navigation/Navigation.jsx';
@@ -31,7 +30,6 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<HomeTest />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Dashboard" element={<Dashboard />} />
         </Routes>

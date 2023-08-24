@@ -29,7 +29,7 @@ export default function Home() {
             <p className='text'style={{ display: 'flex', alignItems: 'center' }}><img src={check} style={{width: '24px', height: '24px', marginLeft:'-80px'}}></img>Real Time Updates</p>
             <p  className='text'style={{ display: 'flex', alignItems: 'center' }}> <img src={check} style={{width: '24px', height: '24px'}}></img> A Forward Looking Perspective</p>
           </div>
-          <Link to='/Dashboard'><button style={{ width: '386px', height: '34px', backgroundColor: 'var(--color-primary)', color: 'var(--color-secondary)' }}>See How Your Score is Calculated <img src={image} style={{width:'10px', height:'10px' }}></img></button></Link>
+          <Link to='/Dashboard'><button className="home-link" >See How Your Score is Calculated <img className="home-img" src={image} style={{width:'10px', height:'10px' }}></img></button></Link>
           <p style={{marginTop: '10px' }}>No credit card required</p>
           <br></br>
           <div style={{ backgroundColor:  '#D9D9D9', marginBottom:'30px'}}>

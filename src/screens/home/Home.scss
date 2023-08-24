@@ -18,3 +18,21 @@ button {
   align-items: center;
   margin-bottom: 10px;
 }
+
+.home-link {
+  width: '386px';
+  border-radius: 6px;
+  height: '34px'; 
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+}
+
+.home-link:hover{
+  cursor: pointer;
+  background: white;
+  color: var(--color-primary);
+  .home-img {
+    filter: invert(19%) sepia(34%) saturate(4938%) hue-rotate(188deg) brightness(43%) contrast(101%);
+  }
+}
