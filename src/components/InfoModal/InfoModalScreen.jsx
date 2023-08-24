@@ -1,8 +1,10 @@
 import React from 'react'
 
-export default function InfoModalScreen() {
-    
+export default function InfoModalScreen( { open , setOpen } ) {
+
   return (
-    <div>InfoModalScreen</div>
+    <div style={{display: open ? "block" : "none" }}>
+        InfoModalScreen
+    </div>
   )
 }

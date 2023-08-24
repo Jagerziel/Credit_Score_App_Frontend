@@ -6,10 +6,6 @@ import InfoModalScreen from './InfoModalScreen.jsx'
 export default function InfoModal( { score } ) {
     const [ open , setOpen ] = useState(false)
 
-    function handleOpen () {
-
-    }
-
     return (
         <>
             <img 
@@ -20,6 +16,7 @@ export default function InfoModal( { score } ) {
                 width="17px"
                 onClick={() => setOpen(!open)}
             />
+            <InfoModalScreen open={open} setOpen={setOpen}/>
         </>
     )
 }
