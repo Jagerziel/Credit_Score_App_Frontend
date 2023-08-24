@@ -6,6 +6,8 @@ import InfoModalScreen from './InfoModalScreen.jsx'
 import { calcScoreDesc } from '../../data/functions.js'
 // Import Data
 import { scoreDetails, scoringUpperBound } from '../../data/data.js'
+// Import CSS
+import './InfoModal.scss'
 
 
 export default function InfoModal( { score , loggedIn } ) {
@@ -27,14 +29,16 @@ export default function InfoModal( { score , loggedIn } ) {
 
     return (
         <>
-            <img 
-                className="infoModal-questionIcon" 
-                src={require("./interrogation-mark.png")} 
-                alt="?" 
-                height="17px"
-                width="17px"
-                onClick={() => setOpen(!open)}
-            />
+            <div className='infoModal-questionIcon-container'>
+                <img 
+                    className="infoModal-questionIcon" 
+                    src={require("./interrogation-mark.png")} 
+                    alt="?" 
+                    height="17px"
+                    width="17px"
+                    onClick={() => setOpen(!open)}
+                />
+            </div>
             <InfoModalScreen open={open} setOpen={setOpen} scoringDesc={scoringDesc} />
         </>
     )
