@@ -38,6 +38,11 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 
 ![LoggedIn](./src/images/LoginDashboardScreenshot.png)
 
+**Information Modal**
+
+*The information modal provides additional information pertinent to the user's score.  This allows a user to gain a better understanding with just one click of the question mark icon*
+
+![Modal](./src/images/LoginDashboardModal.png)
 
 ## How ScoreEase was Built
 
@@ -130,7 +135,6 @@ Our team collaborated across many fronts to construct a full stack MERN applciat
 
 ## Future Features
 
-- Info modals for explanations on credit scores
 - More efficient API call methods 
 - Enhancement of Data Model
 - Packaging for integration into other business products
