@@ -90,6 +90,33 @@ export const userInputCategories = [
   },
 ];
 
+export const scoreDetails = {
+  logout: {
+    title: "What your rating means to lenders",
+    description: "Credit score ranges and what they mean will vary based on the score model used to calculate them, but they are generally similar to the following: 300-579 (Poor), 580-669 (Fair), 670-739 (Good), 740-799 (Very Good), and 800-850 (Excellent)."
+  },
+  Poor: {
+    title: "What a Poor rating means to lenders",
+    description: "Scores between 300-579 are generally considered Poor. With a score lenders consider to be risky, most lenders consider this a poor score."
+  },
+  Fair: {
+    title: "What a Fair rating means to lenders",
+    description: "Scores between 580-669 are generally considered Fair. With a score that aligns with the subprime score range, most lenders consider this a fair score."
+  },
+  Good: {
+    title: "What a Good rating means to lenders",
+    description: "Scores between 670-739 are generally considered Good. With a score near or slightly above the U.S. average, most lenders consider this a good score."
+  },
+  "Very Good": {
+    title: "What a Very Good rating means to lenders",
+    description: "Scores between 740-799 are generally considered Very Good. With a score that signifies most payments are made on time, most lenders consider this a very good score."
+  },
+  Excellent: {
+    title: "What an Excellent rating means to lenders",
+    description: "Scores between 800-850 are generally considered Excellent. With a score that less than 21% of the U.S. population has, most lenders consider this an Excellent score."
+  }
+}
+
 export const scoringUpperBound = [
   [579, 'Poor'],
   [669, 'Fair'],

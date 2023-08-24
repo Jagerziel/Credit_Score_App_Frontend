@@ -1,0 +1,74 @@
+.infoModalScreen-container {
+    // border: 2px solid red;
+    position: absolute;
+    // pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    // right:0;
+    // bottom:0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.infoModalScreen-subcontainer {
+    // border: 2px solid red;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    padding: 150px 0 0 0;
+}
+
+.infoModalScreen-info-container {
+    // border: 2px solid red;
+    width: 332px;
+    height: 232px;
+    border-radius: 12px;
+    background: var(--background-color-secondary);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 27px 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.infoModalScreen-info-title {
+    font-size: 20px; 
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400; 
+
+}
+
+.infoModalScreen-info-description {
+    text-align: left;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400; 
+
+}
+
+
+.infoModalScreen-info-button {
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    background: var(--color-primary); 
+    color: var(--color-secondary);
+    width: 336px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.infoModalScreen-info-button:hover {
+    cursor: pointer;
+    background: var(--color-secondary); 
+    color: var(--color-primary);
+}

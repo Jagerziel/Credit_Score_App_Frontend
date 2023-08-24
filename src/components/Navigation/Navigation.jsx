@@ -32,7 +32,7 @@ export function Navigation() {
           {/* <div className='navigation-hamburger' onClick={handleMenu}>
             <img src={require("./hamburger.png")} height="24px" width="24px" alt="Menu"/>
           </div> */}
-          {user ? <div>{`Welcome ${userName}`}!</div> : <div style={{font: 'roboto serif', fontSize:'24px', fontWeight:'600px'}}>ScoreEase</div>}
+          {user ? <div style={{color: "#004B82", fontWeight: '600'}}>{`Welcome ${userName}`}!</div> : <div style={{font: 'roboto serif', fontSize:'24px', fontWeight:'600', color:'#004B82'}}>ScoreEase</div>}
         </div>
         <div className="navigation-right-container">
         { user ?      
